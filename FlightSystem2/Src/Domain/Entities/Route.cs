@@ -20,6 +20,10 @@ namespace FlightSystem.Api.Src.Domain.Entities
         public Route(List<Flight> fl)
         {
             flights = fl;
+            foreach(var flight in fl)
+            {
+                price += flight.price;
+            }
         }
 
         public Route(Flight fl)

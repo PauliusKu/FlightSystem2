@@ -12,6 +12,8 @@ namespace FlightSystem.Api.Src.Integration.Neo4J.Data
 {
     public class FlightData : IFlightData
     {
+        FlightParser flightParser = new FlightParser();
+
         public List<Flight> GetAll()
         {
             var flightList = new List<Flight>();
@@ -54,6 +56,7 @@ namespace FlightSystem.Api.Src.Integration.Neo4J.Data
 
         private Flight FillFlightData(IRecord record)
         {
+
             var fl = record["fl"].As<INode>();
             var id = record["id"].As<string>();
             var fa = record["fa"].As<INode>();
@@ -67,32 +70,7 @@ namespace FlightSystem.Api.Src.Integration.Neo4J.Data
             var depTime = fl["departs"].As<OffsetTime>().ToString().Replace("Z", "");
             var arrTime = fl["arrives"].As<OffsetTime>().ToString().Replace("Z", "");
 
-            return new Flight()
-            {
-                flightId = id,
-                flightCode = fl["name"].As<string>(),
-                departs = DateTime.ParseExact(depDate + " " + depTime, "yyyy-M-d HH:mm:ss",
-                    System.Globalization.CultureInfo.InvariantCulture),
-                arrives = DateTime.ParseExact(arrDate + " " + arrTime, "yyyy-M-d HH:mm:ss",
-                        System.Globalization.CultureInfo.InvariantCulture),
-                price = fl["price"].As<decimal>(),
-
-                fromAirport = new Airport()
-                {
-                    code = fa["name"].As<string>(),
-                    fullName = fa["fullName"].As<string>(),
-                    cityName = fa["city"].As<string>(),
-                    countryName = fa["country"].As<string>()
-                },
-
-                toAirport = new Airport()
-                {
-                    code = ta["name"].As<string>(),
-                    fullName = ta["fullName"].As<string>(),
-                    cityName = ta["city"].As<string>(),
-                    countryName = ta["country"].As<string>()
-                }
-            };
+            return flightParser.GetFlight(id, fl, depDate, depTime, arrDate, arrTime, fa, ta);
         }
     }
 }

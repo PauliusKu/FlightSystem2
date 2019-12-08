@@ -15,9 +15,9 @@ namespace FlightSystem.Api.Src.Integration.Neo4J
             {
                 return GetSession().Run(query);
             }
-            catch(ServiceUnavailableException e)
+            catch(Exception ex)
             {
-                Console.WriteLine("Exception caught: {0}", e);
+                Console.WriteLine("Exception caught: {0}", ex);
                 throw new NotImplementedException();
             }
             finally
