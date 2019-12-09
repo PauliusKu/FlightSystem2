@@ -54,6 +54,7 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
             foreach(var trip in journey.trips)
             {
                 trip.routes = routeMan.GetRoutes(trip.tripParams);
+                trip.numOfRoutes = trip.routes.Count();
             }
         }
     }

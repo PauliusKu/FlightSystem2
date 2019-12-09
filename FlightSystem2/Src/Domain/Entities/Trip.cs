@@ -12,10 +12,13 @@ namespace FlightSystem.Api.Src.Domain.Entities
     public class Trip : Entity
     {
         [JsonProperty]
-        public List<Route> routes;
+        public TripParams tripParams;
 
         [JsonProperty]
-        public TripParams tripParams;
+        public int numOfRoutes;
+
+        [JsonProperty]
+        public List<Route> routes;
 
         public Trip(TripParams tripPar)
         {

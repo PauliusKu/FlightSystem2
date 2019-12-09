@@ -12,24 +12,22 @@ namespace FlightSystem.Api.Src.Domain.Entities
     public class Route : Entity
     {
         [JsonProperty]
-        public List<Flight> flights = new List<Flight>();
+        public decimal price = 0;
 
         [JsonProperty]
-        public decimal price = 0;
+        public TimeSpan timeSpan;
+
+        [JsonProperty]
+        public List<Flight> flights = new List<Flight>();
 
         public Route(List<Flight> fl)
         {
             flights = fl;
-            foreach(var flight in fl)
-            {
-                price += flight.price;
-            }
         }
 
         public Route(Flight fl)
         {
             flights.Add(fl);
-            price += fl.price;
         }
     }
 }
