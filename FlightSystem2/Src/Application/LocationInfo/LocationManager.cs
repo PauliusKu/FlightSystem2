@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FlightSystem.Api.Domain.Entities;
 using FlightSystem.Api.Src.Application.Common;
+using FlightSystem.Api.Src.Domain.Entities;
 using FlightSystem.Api.Src.Integration.Common;
 using FlightSystem.Api.Src.Integration.FileSystem;
 using FlightSystem.Api.Src.Integration.Neo4J.Data;
@@ -14,6 +15,11 @@ namespace FlightSystem.Api.Src.Application.AirportInfo
     {
         private IAirportData AirportData = new AirportData();
         private ICountryData CountryData = new CountryData();
+
+        public Locations GetLocations()
+        {
+            return new Locations() { airports = GetAllAirports(), countries = GetAllCountries() };
+        }
 
         public List<Country> GetAllCountries()
         {

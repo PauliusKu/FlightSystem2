@@ -2,6 +2,7 @@
 using FlightSystem.Api.Src.Application.Common;
 using FlightSystem.Api.Src.Application.FlightInfo;
 using FlightSystem.Api.Src.Application.RouteInfo;
+using FlightSystem.Api.Src.Domain.Common;
 using FlightSystem.Api.Src.Integration.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;

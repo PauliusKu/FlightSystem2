@@ -3,6 +3,7 @@ using FlightSystem.Api.Src.Application.Common;
 using FlightSystem.Api.Src.Application.FlightInfo;
 using FlightSystem.Api.Src.Application.JourneyInfo;
 using FlightSystem.Api.Src.Domain.Entities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,10 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
             FormSearchRequest(isOneWay, origin, destination, depDate,
                               retDate, onlyDirect, numOfPass, passClass);
             AddTrips();
+
+            var res = JsonConvert.DeserializeObject<Journey>(JsonConvert.SerializeObject(journey));
+            Console.WriteLine(res);
+            System.IO.File.WriteAllText(@"C:\Users\Paulius\Desktop\Flags\WriteText.json", JsonConvert.SerializeObject(journey));
 
             return journey;
         }

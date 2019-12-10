@@ -9,7 +9,14 @@ namespace FlightSystem.Api.Src.Common
     {
         public static DateTime ConvertDateFromString(string date)
         {
-            return DateTime.ParseExact(date, "yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+            try
+            {
+                return DateTime.ParseExact(date, "yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+            }
+            catch (ArgumentNullException)
+            {
+                return DateTime.MinValue;
+            }
         }
 
         public static DateTime ConvertDateFromStringNoErr(string date)

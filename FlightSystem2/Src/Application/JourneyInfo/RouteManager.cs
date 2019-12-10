@@ -17,8 +17,8 @@ namespace FlightSystem.Api.Src.Application.JourneyInfo
         private TripParams tripParams;
 
         private int numOfRoutes;
-        private int maxRoutesFromDb = 1000;
-        private int maxRoutesReturn = 500;
+        private int maxRoutesFromDb = 300;
+        private int maxRoutesReturn = 300;
 
         public List<Route> GetRoutes(TripParams tripPar)
         {

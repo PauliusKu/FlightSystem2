@@ -25,11 +25,9 @@ namespace FlightSystem.Api.Src.Integration.Controllers
         public string Get()
         {
             Response response = new Response();
-
             try
             {
-                response.responseBody.entities.AddRange(LocationMan.GetAllAirports());
-                response.responseBody.entities.AddRange(LocationMan.GetAllCountries());
+                response.responseBody.entities.Add(LocationMan.GetLocations());
             }
             catch(Exception ex)
             {

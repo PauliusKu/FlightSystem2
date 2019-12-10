@@ -20,6 +20,8 @@ namespace FlightSystem.Api.Src.Domain.Entities
         [JsonProperty]
         public List<Flight> flights = new List<Flight>();
 
+        public Route() { }
+
         public Route(List<Flight> fl)
         {
             flights = fl;
