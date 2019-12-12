@@ -24,7 +24,7 @@ namespace FlightSystem.Api.Src.Application.Controllers
         }
 
         [HttpGet]
-        [EnableCors]
+        //[EnableCors]
         public string Get(bool isOneWay,
                           string origin,
                           string destination,

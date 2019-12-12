@@ -22,7 +22,7 @@ namespace FlightSystem.Api.Src.Application.Controllers
         }
 
         [HttpGet]
-        [EnableCors]
+        //[EnableCors]
         public string Get()
         {
             Response response = new Response();

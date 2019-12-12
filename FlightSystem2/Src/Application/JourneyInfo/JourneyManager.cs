@@ -7,7 +7,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace FlightSystem.Api.Src.Application.RouteInfo
 {
@@ -28,6 +31,10 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
         {
             FormSearchRequest(isOneWay, origin, destination, depDate,
                               retDate, onlyDirect, numOfPass, passClass);
+
+            if (!IsValidJourney())
+                return journey;
+
             AddTrips();
 
             return journey;
@@ -59,5 +66,20 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
                 trip.numOfRoutes = trip.routes.Count();
             }
         }
+
+        private bool IsValidJourney()
+        {
+            DateTime earlierDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+
+            foreach (var trip in journey.trips)
+            {
+                if (trip.tripParams.depDate < earlierDateTime)
+                    return false;
+                earlierDateTime = trip.tripParams.depDate;
+            }
+
+            return true;
+        }
+
     }
 }
