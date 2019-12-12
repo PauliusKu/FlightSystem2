@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Neo4j.Driver.V1;
 using System.Threading.Tasks;
 
-namespace FlightSystem.Api.Src.Integration.Neo4J
+namespace FlightSystem.Api.Src.Integration.Neo4J.Common
 {
     public static class Neo4JContext
     {
@@ -11,6 +11,7 @@ namespace FlightSystem.Api.Src.Integration.Neo4J
 
         public static IStatementResult RunQuery(string query)
         {
+
             try
             {
                 return GetSession().Run(query);
@@ -23,6 +24,21 @@ namespace FlightSystem.Api.Src.Integration.Neo4J
             finally
             {
             }
+        }
+
+        public static bool RunTestQuery()
+        {
+            try
+            {
+                _ = Driver;
+                var rez = GetSession().Run("");
+            }
+            catch (ServiceUnavailableException)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         private static ISession GetSession()

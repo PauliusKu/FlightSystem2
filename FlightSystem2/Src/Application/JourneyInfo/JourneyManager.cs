@@ -13,6 +13,7 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
 {
     public class JourneyManager : IJourney
     {
+
         private RouteManager routeMan = new RouteManager();
         private Journey journey;
 
@@ -28,10 +29,6 @@ namespace FlightSystem.Api.Src.Application.RouteInfo
             FormSearchRequest(isOneWay, origin, destination, depDate,
                               retDate, onlyDirect, numOfPass, passClass);
             AddTrips();
-
-            var res = JsonConvert.DeserializeObject<Journey>(JsonConvert.SerializeObject(journey));
-            Console.WriteLine(res);
-            System.IO.File.WriteAllText(@"C:\Users\Paulius\Desktop\Flags\WriteText.json", JsonConvert.SerializeObject(journey));
 
             return journey;
         }

@@ -1,14 +1,14 @@
 ﻿using System;
+using System.Net.Http;
+using System.Text;
 using FlightSystem.Api.Src.Application.Common;
-using FlightSystem.Api.Src.Application.FlightInfo;
 using FlightSystem.Api.Src.Application.RouteInfo;
-using FlightSystem.Api.Src.Domain.Common;
-using FlightSystem.Api.Src.Integration.Common;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace FlightSystem.Api.Src.Integration.Controllers
+namespace FlightSystem.Api.Src.Application.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -24,6 +24,7 @@ namespace FlightSystem.Api.Src.Integration.Controllers
         }
 
         [HttpGet]
+        [EnableCors]
         public string Get(bool isOneWay,
                           string origin,
                           string destination,
@@ -49,7 +50,7 @@ namespace FlightSystem.Api.Src.Integration.Controllers
             {
                 TypeNameHandling = TypeNameHandling.None
             };
-
+            //return new StringContent(JsonConvert.SerializeObject(response, setting), Encoding.UTF8, "application/json");
             return JsonConvert.SerializeObject(response, setting);
         }
     }

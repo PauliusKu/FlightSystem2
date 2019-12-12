@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.IO;
 
-namespace FlightSystem.Api.Src.Integration.Common
+namespace FlightSystem.Api.Src.Application.Common
 {
     public static class MyImageConverter
     {

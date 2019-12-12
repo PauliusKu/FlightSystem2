@@ -2,7 +2,6 @@
 using FlightSystem.Api.Src.Application.Common;
 using FlightSystem.Api.Src.Application.FlightInfo;
 using FlightSystem.Api.Src.Domain.Entities;
-using FlightSystem.Api.Src.Integration.Neo4J.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +12,13 @@ namespace FlightSystem.Api.Src.Application.JourneyInfo
     public class RouteManager
     {
         private IFlight flightMan = new FlightManager();
-        private RouteData routeData = new RouteData();
+        private IRouteData routeData = SetterData.GetRouteData();
+        private IBackupData backupData = SetterData.GetBackupData();
         private TripParams tripParams;
 
         private int numOfRoutes;
-        private int maxRoutesFromDb = 300;
-        private int maxRoutesReturn = 300;
+        private int maxRoutesFromDb = 50;
+        private int maxRoutesReturn = 20;
 
         public List<Route> GetRoutes(TripParams tripPar)
         {
@@ -92,7 +92,17 @@ namespace FlightSystem.Api.Src.Application.JourneyInfo
         private List<Route> SortAndCutRoutes(List<Route> routes)
         {
             //routes.Sort(); //update
-            //routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);
+            try
+            {
+                routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            if (routes.Count() > 0)
+                backupData.SetBackup(routes[0]);
 
             return routes;
         }

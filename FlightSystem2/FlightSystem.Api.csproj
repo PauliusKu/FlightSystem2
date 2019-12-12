@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Src\Domain\Exeptions\" />
+    <Folder Include="Src\Integration\FileSystem\Common\" />
     <Folder Include="Src\Integration\Redis\Data\" />
   </ItemGroup>
 

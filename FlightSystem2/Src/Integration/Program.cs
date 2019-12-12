@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using FlightSystem.Api.Src.Integration.Neo4J;
+using FlightSystem.Api.Src.Application.Common;
+using FlightSystem.Api.Src.Integration.Neo4J.Common;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +23,15 @@ namespace FlightSystem
 
             }
 
-            _ = Neo4JContext.Driver;
+            try
+            {
+                _ = Neo4JContext.Driver;
+                SetterData.TestNeo4JConn();
+            }
+            catch (Exception)
+            {
+
+            }
 
             host.Run();
         }

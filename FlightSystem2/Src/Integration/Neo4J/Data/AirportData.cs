@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FlightSystem.Api.Domain.Entities;
-using FlightSystem.Api.Src.Integration.Common;
-using FlightSystem.Api.Src.Integration.Neo4J;
+using FlightSystem.Api.Src.Application.Common;
+using FlightSystem.Api.Src.Integration.Neo4J.Common;
 using Neo4j.Driver.V1;
 using FlightSystem.Api.Src.Domain.Common;
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FlightSystem.Api.Src.Integration.Common
+namespace FlightSystem.Api.Src.Application.Common
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class ResponseHeader

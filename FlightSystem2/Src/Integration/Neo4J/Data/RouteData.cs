@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using Neo4j.Driver.V1;
 using FlightSystem.Api.Domain.Entities;
+using FlightSystem.Api.Src.Application.Common;
+using FlightSystem.Api.Src.Integration.Neo4J.Common;
 
 namespace FlightSystem.Api.Src.Integration.Neo4J.Data
 {
-    public class RouteData
+    public class RouteData : IRouteData
     {
         FlightParser flightParser = new FlightParser();
 
@@ -22,7 +24,7 @@ namespace FlightSystem.Api.Src.Integration.Neo4J.Data
                                           "(tranDay1)-[d2:hasDay]-(tranAirport:airport) " +
                                           "WITH depAirport, depDay, tranAirport, arrAirport, arrDay, flight1, flight2, tranDay1, " +
                                           "r1, r2, r3, r4, d1, d2, d3, duration.inseconds(flight1.arrives, flight2.departs).minutes AS conTime, flight1.price + flight2.price AS totPrice " +
-                                          "WHERE flight1.arrives < flight2.departs AND conTime >= 50 " +
+                                          "WHERE flight1.arrives < flight2.departs AND conTime >= 50 AND conTime <= 720 " +
                                           "RETURN depAirport, depDay, tranAirport, arrAirport, arrDay, flight1, flight2, tranDay1, id(flight1) as id1, id(flight2) as id2, r1, r2, r3, r4, d1, d2, d3, conTime, totPrice " +
                                           "ORDER BY totPrice;");
 
@@ -45,7 +47,8 @@ namespace FlightSystem.Api.Src.Integration.Neo4J.Data
                                           "WITH depAirport, depDay, tranAirport1, tranAirport2, arrAirport, arrDay, flight1, flight2, flight3, tranDay1, tranDay2, " +
                                           "d1, d2, d3, d4, duration.inseconds(flight1.arrives, flight2.departs).minutes AS conTime1, duration.inseconds(flight2.arrives, flight3.departs).minutes AS conTime2, " +
                                           "flight1.price + flight2.price + flight3.price AS totPrice " +
-                                          "WHERE flight1.arrives < flight2.departs AND conTime1 >= 50 AND flight2.arrives < flight3.departs AND conTime2 >= 50 " +
+                                          "WHERE flight1.arrives < flight2.departs AND conTime1 >= 50 AND conTime1 <= 720 AND " +
+                                          "flight2.arrives < flight3.departs AND conTime2 >= 50 AND conTime2 <= 720 " +
                                           "RETURN depAirport, depDay, tranAirport1, tranAirport2, arrAirport, arrDay, flight1, flight2, flight3, tranDay1, tranDay2, " +
                                           "d1, d2, d3, d4, id(flight1) as id1, id(flight2) as id2, id(flight3) as id3, conTime1, conTime2, totPrice " +
                                           "ORDER BY totPrice;");

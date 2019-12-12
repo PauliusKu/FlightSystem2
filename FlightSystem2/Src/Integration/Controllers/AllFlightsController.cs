@@ -1,12 +1,11 @@
 ﻿using System;
 using FlightSystem.Api.Src.Application.Common;
 using FlightSystem.Api.Src.Application.FlightInfo;
-using FlightSystem.Api.Src.Integration.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace FlightSystem.Api.Src.Integration.Controllers
+namespace FlightSystem.Api.Src.Application.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,12 +1,12 @@
 ﻿using System;
 using FlightSystem.Api.Src.Application.AirportInfo;
 using FlightSystem.Api.Src.Application.Common;
-using FlightSystem.Api.Src.Integration.Common;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
-namespace FlightSystem.Api.Src.Integration.Controllers
+namespace FlightSystem.Api.Src.Application.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -22,6 +22,7 @@ namespace FlightSystem.Api.Src.Integration.Controllers
         }
 
         [HttpGet]
+        [EnableCors]
         public string Get()
         {
             Response response = new Response();
