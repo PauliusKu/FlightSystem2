@@ -1,17 +1,15 @@
-﻿using System;
-using FlightSystem.Api.Src.Application.Common;
-using FlightSystem.Api.Src.Application.FlightInfo;
+﻿using FlightSystem.Api.Src.Application.Interfaces.AManagers;
+using FlightSystem.Api.Src.Application.Managers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace FlightSystem.Api.Src.Application.Controllers
+namespace FlightSystem.Api.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class AllFlightsController : ControllerBase
     {
-        private IFlight flight = new FlightManager();
+        private AFlightManager _flightManager = new FlightManager();
 
         private readonly ILogger<AllFlightsController> _logger;
 
@@ -23,23 +21,8 @@ namespace FlightSystem.Api.Src.Application.Controllers
         [HttpGet]
         public string Get()
         {
-            Response response = new Response();
+            return _flightManager.GetAllFlights().ToString();
 
-            try
-            {
-                response.responseBody.entities.AddRange(flight.GetAllFlights());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception caught: {0}", ex);
-            }
-
-            var setting = new JsonSerializerSettings()
-            {
-                TypeNameHandling = TypeNameHandling.None
-            };
-
-            return JsonConvert.SerializeObject(response, setting);
         }
     }
 }

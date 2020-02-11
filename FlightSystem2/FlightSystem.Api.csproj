@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Src\Integration\FileSystem\**" />
+    <Compile Remove="Src\Integration\Redis\**" />
+    <Content Remove="Src\Integration\FileSystem\**" />
+    <Content Remove="Src\Integration\Redis\**" />
+    <EmbeddedResource Remove="Src\Integration\FileSystem\**" />
+    <EmbeddedResource Remove="Src\Integration\Redis\**" />
+    <None Remove="Src\Integration\FileSystem\**" />
+    <None Remove="Src\Integration\Redis\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -19,11 +30,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="StackExchange.Redis" Version="2.0.601" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Src\Integration\FileSystem\Common\" />
-    <Folder Include="Src\Integration\Redis\Data\" />
   </ItemGroup>
 
 </Project>

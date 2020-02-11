@@ -1,18 +1,14 @@
-﻿using System;
-using FlightSystem.Api.Src.Application.AirportInfo;
-using FlightSystem.Api.Src.Application.Common;
-using Microsoft.AspNetCore.Cors;
+﻿using FlightSystem.Api.Src.Application.Interfaces.AManagers;
+using FlightSystem.Api.Src.Application.Managers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
-namespace FlightSystem.Api.Src.Application.Controllers
+namespace FlightSystem.Api.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
     public class AllLocationsController : ControllerBase
     {
-        public ILocation LocationMan = new LocationManager();
 
         private readonly ILogger<AllLocationsController> _logger;
 
@@ -25,20 +21,8 @@ namespace FlightSystem.Api.Src.Application.Controllers
         //[EnableCors]
         public string Get()
         {
-            Response response = new Response();
-            try
-            {
-                response.responseBody.entities.Add(LocationMan.GetLocations());
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Exception caught: {0}", ex);
-            }
-
-            var setting = new JsonSerializerSettings() { 
-            TypeNameHandling = TypeNameHandling.None};
-
-            return JsonConvert.SerializeObject(response, setting);
+            ALocationManager _locationManager = new LocationManager();
+            return _locationManager.ManageLocations();
         }
 
     }
