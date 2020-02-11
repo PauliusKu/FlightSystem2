@@ -1,4 +1,4 @@
-﻿namespace FlightSystem.Api.Src.Application.Interfaces.AManagers
+﻿namespace FlightSystem.Api.Application.Interfaces.AManagers
 {
     public abstract class ALocationManager : AManager
     {

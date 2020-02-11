@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using System;
+﻿using System;
+using FlightSystem.Api.Application.Interfaces.AServices;
 
-namespace FlightSystem.Api.Src.Integration.Common.Services.Converters
+namespace FlightSystem.Api.Integration.Common.Services.Converters
 {
     public class DatesConverter : IDateConverter
     {

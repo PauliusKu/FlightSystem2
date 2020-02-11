@@ -1,6 +1,6 @@
-﻿using FlightSystem.Api.Src.Application.Interfaces.Data;
+﻿using FlightSystem.Api.Application.Interfaces.Data;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.Factories
+namespace FlightSystem.Api.Application.Interfaces.Factories
 {
     public interface IDataFactory
     {

@@ -1,4 +1,4 @@
-﻿using FlightSystem.Api.Src.Domain.Interfaces;
+﻿using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {

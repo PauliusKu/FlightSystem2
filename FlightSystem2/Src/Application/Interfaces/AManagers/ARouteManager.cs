@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Src.Domain.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.AManagers
+namespace FlightSystem.Api.Application.Interfaces.AManagers
 {
     public abstract class ARouteManager  : AManager
     {

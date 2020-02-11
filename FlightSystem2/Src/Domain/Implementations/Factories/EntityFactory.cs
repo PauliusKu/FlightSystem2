@@ -1,8 +1,8 @@
-﻿using FlightSystem.Api.Domain.Implementations.Entities;
-using FlightSystem.Api.Src.Domain.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Domain.Implementations.Entities;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Domain.Implementations.Factories
+namespace FlightSystem.Api.Domain.Implementations.Factories
 {
     public class EntityFactory : IEntityFactory
     {

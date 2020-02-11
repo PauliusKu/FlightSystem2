@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using FlightSystem.Api.Src.Domain.Interfaces;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.Data
+namespace FlightSystem.Api.Application.Interfaces.Data
 {
     public interface IRouteData
     {

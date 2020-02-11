@@ -1,8 +1,8 @@
 ﻿using System;
-using Neo4j.Driver.V1;
 using FlightSystem.Api.Domain.Implementations.Entities;
+using Neo4j.Driver.V1;
 
-namespace FlightSystem.Api.Src.Repository.Neo4J.Common
+namespace FlightSystem.Api.Repository.Neo4J.Common
 {
     public class FlightParser
     {

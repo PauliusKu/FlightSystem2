@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Src.Domain.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Integration.Common.Interfaces
+namespace FlightSystem.Api.Application.Interfaces.AServices
 {
     public interface IResponseBody
     {

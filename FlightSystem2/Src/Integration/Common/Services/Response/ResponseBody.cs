@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Src.Domain.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Domain.Interfaces;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
-namespace FlightSystem.Api.Src.Integration.Common.Services.Response
+namespace FlightSystem.Api.Integration.Common.Services.Response
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class ResponseBody : IResponseBody

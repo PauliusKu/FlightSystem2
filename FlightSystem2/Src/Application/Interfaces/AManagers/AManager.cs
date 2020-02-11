@@ -1,14 +1,13 @@
-﻿using FlightSystem.Api.Src.Application.Common.Factories;
-using FlightSystem.Api.Src.Application.Interfaces.Factories;
-using FlightSystem.Api.Src.Domain.Implementations.Factories;
-using FlightSystem.Api.Src.Domain.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Services.Converters;
-using FlightSystem.Api.Src.Integration.Common.Services.Logger;
-using FlightSystem.Api.Src.Integration.Common.Services.Response;
-using FlightSystem.Api.Src.Repository.Common;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Application.Interfaces.Factories;
+using FlightSystem.Api.Domain.Implementations.Factories;
+using FlightSystem.Api.Domain.Interfaces;
+using FlightSystem.Api.Integration.Common.Services.Converters;
+using FlightSystem.Api.Integration.Common.Services.Logger;
+using FlightSystem.Api.Integration.Common.Services.Response;
+using FlightSystem.Api.Repository.Common;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.AManagers
+namespace FlightSystem.Api.Application.Interfaces.AManagers
 {
     public abstract class AManager
     {

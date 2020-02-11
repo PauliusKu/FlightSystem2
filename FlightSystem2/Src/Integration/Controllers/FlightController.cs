@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Src.Application.Interfaces.AManagers;
-using FlightSystem.Api.Src.Application.Managers;
+﻿using FlightSystem.Api.Application.Interfaces.AManagers;
+using FlightSystem.Api.Application.Managers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace FlightSystem.Api.Src.Integration.Controllers
+namespace FlightSystem.Api.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]

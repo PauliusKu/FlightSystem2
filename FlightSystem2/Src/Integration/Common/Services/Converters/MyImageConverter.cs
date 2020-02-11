@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
+using FlightSystem.Api.Application.Interfaces.AServices;
 
-namespace FlightSystem.Api.Src.Integration.Common.Services.Converters
+namespace FlightSystem.Api.Integration.Common.Services.Converters
 {
     public class MyImageConverter : IImageConverter
     {

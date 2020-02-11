@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlightSystem.Api.Src.Domain.Interfaces
+namespace FlightSystem.Api.Domain.Interfaces
 {
     public interface IRoute : IEntity
     {

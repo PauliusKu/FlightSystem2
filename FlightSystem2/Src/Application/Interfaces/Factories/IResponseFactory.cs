@@ -1,8 +1,8 @@
-﻿using FlightSystem.Api.Src.Domain.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Application.Common.Factories
+namespace FlightSystem.Api.Application.Interfaces.Factories
 {
     public interface IResponseFactory
     {

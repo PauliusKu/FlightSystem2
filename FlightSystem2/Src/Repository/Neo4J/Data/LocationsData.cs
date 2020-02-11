@@ -1,8 +1,8 @@
-﻿using FlightSystem.Api.Domain.Implementations.Entities;
-using FlightSystem.Api.Src.Application.Interfaces.Data;
-using FlightSystem.Api.Src.Domain.Interfaces;
+﻿using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Domain.Implementations.Entities;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Repository.Neo4J.Data
+namespace FlightSystem.Api.Repository.Neo4J.Data
 {
     public class LocationsData : ILocationsData
     {

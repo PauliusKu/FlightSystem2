@@ -1,15 +1,15 @@
-﻿namespace FlightSystem.Api.Src.Domain.Interfaces
+﻿namespace FlightSystem.Api.Domain.Interfaces
 {
     public interface IAirport : IEntity
     {
-        public string fullName { get; set; }
+        string fullName { get; set; }
 
-        public string type { get; }
+        string type { get; }
 
-        public string code { get; set; }
+        string code { get; set; }
 
-        public string cityName { get; set; }
+        string cityName { get; set; }
 
-        public string countryName { get; set; }
+        string countryName { get; set; }
     }
 }

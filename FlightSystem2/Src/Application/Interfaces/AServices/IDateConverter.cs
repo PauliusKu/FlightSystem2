@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FlightSystem.Api.Src.Integration.Common.Interfaces
+namespace FlightSystem.Api.Application.Interfaces.AServices
 {
     public interface IDateConverter
     {

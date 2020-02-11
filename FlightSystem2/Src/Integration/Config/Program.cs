@@ -1,10 +1,10 @@
 using System;
-using FlightSystem.Api.Src.Repository.Neo4J.Common;
+using FlightSystem.Api.Repository.Neo4J.Common;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace FlightSystem
+namespace FlightSystem.Api.Integration.Config
 {
     public class Program
     {

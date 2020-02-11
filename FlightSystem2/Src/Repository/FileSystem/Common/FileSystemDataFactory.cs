@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Src.Application.Interfaces.Data;
-using FlightSystem.Api.Src.Application.Interfaces.Factories;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using FlightSystem.Api.Src.Repository.FileSystem.Data;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Application.Interfaces.Factories;
+using FlightSystem.Api.Repository.FileSystem.Data;
 
-namespace FlightSystem.Api.Src.Repository.FileSystem.Common
+namespace FlightSystem.Api.Repository.FileSystem.Common
 {
     public class FileSystemDataFactory : IDataFactory
     {

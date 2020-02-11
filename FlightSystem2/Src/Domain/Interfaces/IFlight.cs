@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FlightSystem.Api.Src.Domain.Interfaces
+namespace FlightSystem.Api.Domain.Interfaces
 {
     public interface IFlight : IEntity
     {

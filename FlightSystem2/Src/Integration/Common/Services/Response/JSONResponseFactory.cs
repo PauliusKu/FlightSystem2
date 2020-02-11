@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Src.Application.Common.Factories;
-using FlightSystem.Api.Src.Domain.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Application.Interfaces.Factories;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Integration.Common.Services.Response
+namespace FlightSystem.Api.Integration.Common.Services.Response
 {
     public class JSONResponseFactory : IResponseFactory
     {

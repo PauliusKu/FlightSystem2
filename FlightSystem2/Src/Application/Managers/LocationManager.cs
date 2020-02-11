@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlightSystem.Api.Src.Application.Interfaces.AManagers;
-using FlightSystem.Api.Src.Application.Interfaces.Data;
-using FlightSystem.Api.Src.Domain.Interfaces;
+using FlightSystem.Api.Application.Interfaces.AManagers;
+using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Domain.Interfaces;
 
-namespace FlightSystem.Api.Src.Application.Managers
+namespace FlightSystem.Api.Application.Managers
 {
     public class LocationManager : ALocationManager
     {

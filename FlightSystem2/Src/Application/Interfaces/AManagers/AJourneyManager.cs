@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Services.Converters;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Integration.Common.Services.Converters;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.AManagers
+namespace FlightSystem.Api.Application.Interfaces.AManagers
 {
     public abstract class AJourneyManager : AManager
     {

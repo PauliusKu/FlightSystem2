@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using System;
+﻿using System;
+using FlightSystem.Api.Application.Interfaces.AServices;
 
-namespace FlightSystem.Api.Src.Integration.Common.Services.Logger
+namespace FlightSystem.Api.Integration.Common.Services.Logger
 {
     public class ConsoleLogger : ILogger
     {

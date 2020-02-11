@@ -1,5 +1,5 @@
+using FlightSystem.Api.Domain.Interfaces;
 using Newtonsoft.Json;
-using FlightSystem.Api.Src.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {

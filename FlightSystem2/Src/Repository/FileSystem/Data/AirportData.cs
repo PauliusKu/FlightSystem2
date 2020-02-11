@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Domain.Implementations.Entities;
-using FlightSystem.Api.Src.Application.Interfaces.Data;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Domain.Implementations.Entities;
 
-namespace FlightSystem.Api.Src.Repository.FileSystem.Data
+namespace FlightSystem.Api.Repository.FileSystem.Data
 {
     public class AirportData : IAirportData
     {

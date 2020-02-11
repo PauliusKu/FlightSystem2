@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
+using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Implementations.Entities;
-using FlightSystem.Api.Src.Application.Interfaces.Data;
-using FlightSystem.Api.Src.Repository.Neo4J.Common;
+using FlightSystem.Api.Repository.Neo4J.Common;
 using Neo4j.Driver.V1;
 
-namespace FlightSystem.Api.Src.Repository.Neo4J.Data
+namespace FlightSystem.Api.Repository.Neo4J.Data
 {
     public class AirportData : IAirportData
     {

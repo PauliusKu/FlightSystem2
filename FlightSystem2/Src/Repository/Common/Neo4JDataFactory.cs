@@ -1,9 +1,9 @@
-﻿using FlightSystem.Api.Src.Application.Interfaces.Data;
-using FlightSystem.Api.Src.Application.Interfaces.Factories;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using FlightSystem.Api.Src.Repository.FileSystem.Data;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Application.Interfaces.Factories;
+using FlightSystem.Api.Repository.FileSystem.Data;
 
-namespace FlightSystem.Api.Src.Repository.Common
+namespace FlightSystem.Api.Repository.Common
 {
     public class Neo4JDataFactory : IDataFactory
     {

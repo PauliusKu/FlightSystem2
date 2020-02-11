@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using FlightSystem.Api.Integration.Config;
 using Neo4j.Driver.V1;
-using System.Threading.Tasks;
-using FlightSystem.Api.Src.Integration.Config;
 
-namespace FlightSystem.Api.Src.Repository.Neo4J.Common
+namespace FlightSystem.Api.Repository.Neo4J.Common
 {
     public static class Neo4JContext
     {

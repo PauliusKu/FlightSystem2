@@ -1,7 +1,7 @@
-﻿using FlightSystem.Api.Domain.Implementations.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using FlightSystem.Api.Domain.Implementations.Entities;
 
-namespace FlightSystem.Api.Src.Application.Interfaces.Data
+namespace FlightSystem.Api.Application.Interfaces.Data
 {
     public interface ICountryData
     {

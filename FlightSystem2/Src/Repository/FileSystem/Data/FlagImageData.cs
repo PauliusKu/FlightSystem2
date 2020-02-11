@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using FlightSystem.Api.Src.Integration.Config;
-using FlightSystem.Api.Src.Domain.Interfaces;
-using FlightSystem.Api.Src.Integration.Common.Interfaces;
-using FlightSystem.Api.Src.Application.Interfaces.Data;
+using FlightSystem.Api.Application.Interfaces.AServices;
+using FlightSystem.Api.Application.Interfaces.Data;
+using FlightSystem.Api.Domain.Interfaces;
+using FlightSystem.Api.Integration.Config;
 
-namespace FlightSystem.Api.Src.Repository.FileSystem.Data
+namespace FlightSystem.Api.Repository.FileSystem.Data
 {
     public class FlagImageData : IFlagImageData
     {
