@@ -6,18 +6,16 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["RebusNeo/RebusNeo.csproj", "RebusNeo/"]
-RUN dotnet restore "RebusNeo/RebusNeo.csproj"
+COPY ["RebusCore/RebusCore.csproj", "RebusCore/"]
+RUN dotnet restore "RebusCore/RebusCore.csproj"
 COPY . .
-WORKDIR "/src/RebusNeo"
-RUN dotnet build "RebusNeo.csproj" -c Release -o /app/build
+WORKDIR "/src/RebusCore"
+RUN dotnet build "RebusCore.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "RebusNeo.csproj" -c Release -o /app/publish
+RUN dotnet publish "RebusCore.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "RebusNeo.dll"]
-
-COPY RebusNeo/Files /app/files
+ENTRYPOINT ["dotnet", "RebusCore.dll"]

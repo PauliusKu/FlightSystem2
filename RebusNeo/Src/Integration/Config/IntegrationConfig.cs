@@ -9,7 +9,7 @@ namespace RebusNeo.Src.Integration.Config
     {
         public static string GetFileSystemDir()
         {
-            return @"C:\Users\Paulius\Desktop\";
+            return OperatingSys.IsLinux() ? "/app/files/" : @"C:\Users\Paulius\Desktop\";
         }
 
         public static string GetTestFileType()
