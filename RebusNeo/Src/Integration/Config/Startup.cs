@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace RebusNeo
+namespace RebusNeo.Src.Integration.Config
 {
     public class Startup
     {

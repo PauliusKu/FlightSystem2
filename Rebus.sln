@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebusCore", "RebusCore\RebusCore.csproj", "{AA40BB18-8E8F-487E-A92C-E889C3FE76E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebusNeo", "RebusNeo\RebusNeo.csproj", "{346EEC11-1E4E-47D8-9FFE-0080CAE18ACE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebusNeo", "RebusNeo\RebusNeo.csproj", "{346EEC11-1E4E-47D8-9FFE-0080CAE18ACE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AA40BB18-8E8F-487E-A92C-E889C3FE76E4} = {AA40BB18-8E8F-487E-A92C-E889C3FE76E4}
 	EndProjectSection

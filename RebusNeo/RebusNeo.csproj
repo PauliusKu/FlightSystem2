@@ -6,14 +6,32 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Application\**" />
+    <Compile Remove="Domain\**" />
+    <Compile Remove="Integration\**" />
+    <Compile Remove="Repository\**" />
+    <Content Remove="Application\**" />
+    <Content Remove="Domain\**" />
+    <Content Remove="Integration\**" />
+    <Content Remove="Repository\**" />
+    <EmbeddedResource Remove="Application\**" />
+    <EmbeddedResource Remove="Domain\**" />
+    <EmbeddedResource Remove="Integration\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Application\**" />
+    <None Remove="Domain\**" />
+    <None Remove="Integration\**" />
+    <None Remove="Repository\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Application\" />
-    <Folder Include="Domain\" />
-    <Folder Include="Integration\" />
-    <Folder Include="Repository\" />
+    <Folder Include="Src\Domain\" />
+    <Folder Include="Src\Repository\FileSystem\Common\" />
+    <Folder Include="Src\Repository\RebusCore\Common\" />
   </ItemGroup>
 
 
