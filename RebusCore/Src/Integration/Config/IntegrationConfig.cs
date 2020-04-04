@@ -12,7 +12,7 @@
 
         public static string GetBackupFileType() { return ".json"; }
 
-        public static string GetFlagsFilePath() { return @"C:\Users\Paulius\Desktop\Flags\"; }
+        public static string GetFlagsFilePath() { return "/app/files/flags/"; }
 
         public static string GetFlagsFileType() { return ".png"; }
 

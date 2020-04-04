@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using FlightSystem.Api.Application.Interfaces.AServices;
 using FlightSystem.Api.Application.Interfaces.Data;
@@ -32,12 +33,13 @@ namespace FlightSystem.Api.Repository.FileSystem.Data
 
             try
             {
-                image = Image.FromFile(IntegrationConfig.GetFlagsFilePath() + countryCode + IntegrationConfig.GetFlagsFileType());
+                image = Image.FromFile(IntegrationConfig.GetFlagsFilePath() + countryCode.ToLower() + IntegrationConfig.GetFlagsFileType());
             }
 
-            catch (System.IO.IOException e)
+            catch (Exception e)
             {
                 _logger.LogObject("Exception caught: {0}", e);
+                return "";
             }
 
             return _imageConverter.ImageToString(image);

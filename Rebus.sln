@@ -10,6 +10,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RebusNeo", "RebusNeo\RebusN
 		{AA40BB18-8E8F-487E-A92C-E889C3FE76E4} = {AA40BB18-8E8F-487E-A92C-E889C3FE76E4}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RebusAdmin", "RebusAdmin\RebusAdmin.csproj", "{3B6D1248-3FFF-463F-9D28-912269199158}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{346EEC11-1E4E-47D8-9FFE-0080CAE18ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{346EEC11-1E4E-47D8-9FFE-0080CAE18ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{346EEC11-1E4E-47D8-9FFE-0080CAE18ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6D1248-3FFF-463F-9D28-912269199158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6D1248-3FFF-463F-9D28-912269199158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6D1248-3FFF-463F-9D28-912269199158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6D1248-3FFF-463F-9D28-912269199158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

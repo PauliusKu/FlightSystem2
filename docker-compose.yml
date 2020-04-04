@@ -19,6 +19,16 @@ services:
             - "5001"
         links:
             - neo4j
+    rebusadmin:
+        build:
+            context: .
+            dockerfile: RebusAdmin/Dockerfile
+        ports:
+            - "5003:5003"
+        expose:
+            - "5003"
+        links:
+            - neo4j
     neo4j:
         build:
             context: .

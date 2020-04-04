@@ -7,7 +7,6 @@ namespace RebusCore.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Produces("application/json")]
     public class AllLocationsController : ControllerBase
     {
 
