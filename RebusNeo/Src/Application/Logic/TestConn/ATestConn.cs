@@ -19,14 +19,14 @@ namespace RebusNeo.Src.Application.Logic.TestConn
         {
             SetSpecificData();
 
-            try
-            {
+            // try
+            // {
                 _results = _testConnData.GetTestConnResults();
-            }
-            catch (Exception)
-            {
-                _results = _errMsg;
-            }
+            // }
+            // catch (Exception ex)
+            // {
+            //     throw ex;
+            // }
 
             if (_results == "")
             {

@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+    rebusneo:
+        build:
+            context: .
+            dockerfile: RebusNeo/Dockerfile
+        ports:
+            - "5002:5002"
+        links:
+            - "rebuscore"
+    rebuscore:
+        build:
+            context: .
+            dockerfile: RebusCore/Dockerfile
+        ports:
+            - "5001:5001"
+        expose:
+            - "5001"
+        links:
+            - neo4j
+    neo4j:
+        build:
+            context: .
+            dockerfile: Neo4J/Dockerfile
+        ports:
+            - "7474:7474"
+            - "7687:7687"
+        expose:
+            - "7687"

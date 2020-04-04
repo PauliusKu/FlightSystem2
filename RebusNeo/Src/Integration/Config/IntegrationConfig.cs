@@ -12,6 +12,11 @@ namespace RebusNeo.Src.Integration.Config
             return OperatingSys.IsLinux() ? "/app/files/" : @"C:\Users\Paulius\Desktop\";
         }
 
+        public static string GetRebusCoreUri()
+        {
+            return OperatingSys.IsLinux() ? "http://rebuscore:5001/" : "";
+        }
+
         public static string GetTestFileType()
         {
             return ".json";

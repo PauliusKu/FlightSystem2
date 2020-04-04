@@ -3,7 +3,7 @@ using FlightSystem.Api.Application.Managers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace FlightSystem.Api.Integration.Controllers
+namespace RebusCore.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]

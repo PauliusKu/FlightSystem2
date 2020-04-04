@@ -19,6 +19,7 @@ namespace RebusNeo.Src.Application.Logic.TestConn
         public TestConnManager()
         {
             _testConnList.Add(new TestConnFileSystem());
+            _testConnList.Add(new TestConnRebusCore());
         }
 
         public override void TestConn()
