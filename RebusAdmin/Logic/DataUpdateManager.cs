@@ -118,26 +118,33 @@ namespace RebusAdmin.Logic
                     _relations++;
                 }
             }
+            System.Console.WriteLine("Main setup finished. New Nodes:" + _nodes.ToString() + ", Relations:" + (_relations).ToString());
         }
 
         public void CreateFlights()
         {
             List<Flights> flights = ReadFlights();
-            foreach (var i in flights)
+
+            string dateStr, dateNextStr;
+
+            DateTime begin = _start;
+            DateTime end = _end;
+
+            int num = 1;
+            for (DateTime date = begin; date <= end; date = date.AddDays(1))
             {
 
-                DateTime begin = _start;
-                DateTime end = _end;
+                int nodes = 0;
+                int relations = 0;
 
-                int num = 1;
-
-                for (DateTime date = begin; date <= end; date = date.AddDays(1))
+                foreach (var i in flights)
                 {
-                    string dateStr = date.ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
-                    string dateNextStr = date.AddDays(1).ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
 
                     if (i.ArrOnNextDay == false)
                     {
+                        dateStr = date.ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+                        dateNextStr = date.AddDays(1).ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+
                         Neo4JContext.RunQuery("create (:flight{name:'" + i.Company + "-" + num + i.FlightNum + "', departs: time('" + i.Departs + "'), arrives: time('" + i.Arrives + "'), price: " + i.Price + "})");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + i.FlightNum + "'}), (b:airportDay{name:'" + i.From + ":" + dateStr + "'}) merge (b)-[:" + i.To + "flight]->(a)");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + i.FlightNum + "'}), (b:airportDay{name:'" + i.To + ":" + dateStr + "'}) merge (a)-[:" + i.To + "flight]->(b)");
@@ -146,26 +153,34 @@ namespace RebusAdmin.Logic
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + (i.FlightNum + 1) + "'}), (b:airportDay{name:'" + i.From + ":" + dateStr + "'}) merge (b)<-[:" + i.To + "flight]-(a)");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + (i.FlightNum + 1) + "'}), (b:airportDay{name:'" + i.To + ":" + dateStr + "'}) merge (a)<-[:" + i.To + "flight]-(b)");
 
-                        _nodes += 2;
-                        _relations += 4;
+                        nodes += 2;
+                        relations += 4;
                     }
                     else if (date != end)
                     {
+                        dateStr = date.ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+                        dateNextStr = date.AddDays(1).ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+
                         Neo4JContext.RunQuery("create (:flight{name:'" + i.Company + "-" + num + i.FlightNum + "', departs: time('" + i.Departs + "'), arrives: time('" + i.Arrives + "'), price: " + i.Price + "})");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + i.FlightNum + "'}), (b:airportDay{name:'" + i.From + ":" + dateStr + "'}) merge (b)-[:" + i.To + "flight]->(a)");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + i.FlightNum + "'}), (b:airportDay{name:'" + i.To + ":" + dateNextStr + "'}) merge (a)-[:" + i.To + "flight]->(b)");
+
+                        dateNextStr = date.ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
+                        dateStr = date.AddDays(1).ToString("yyyy-M-d", System.Globalization.CultureInfo.InvariantCulture);
 
                         Neo4JContext.RunQuery("create (:flight{name:'" + i.Company + "-" + num + (i.FlightNum + 1) + "', departs: time('" + i.Departs + "'), arrives: time('" + i.Arrives + "'), price: " + i.Price + "})");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + (i.FlightNum + 1) + "'}), (b:airportDay{name:'" + i.From + ":" + dateStr + "'}) merge (b)<-[:" + i.To + "flight]-(a)");
                         Neo4JContext.RunQuery("match (a:flight{name:'" + i.Company + "-" + num + (i.FlightNum + 1) + "'}), (b:airportDay{name:'" + i.To + ":" + dateNextStr + "'}) merge (a)<-[:" + i.To + "flight]-(b)");
 
-                        _nodes += 2;
+                        nodes += 2;
                         _relations += 4;
                     }
-
-                    num++;
-
                 }
+                _nodes += nodes;
+                _relations += relations;
+                System.Console.WriteLine("Loading days. Day " + num + ". New Nodes:" + _nodes.ToString() + ", Relations:" + (_relations).ToString());
+
+                num++;
             }
         }
 

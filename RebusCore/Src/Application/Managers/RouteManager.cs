@@ -37,7 +37,7 @@ namespace FlightSystem.Api.Application.Managers
             if (numOfRoutes >= maxRoutesFromDb)
                 return SortAndCutRoutes(routes);
 
-            routes.ToList().AddRange(Get1StopRoutes());
+            routes.AddRange(Get1StopRoutes());
 
             if (numOfRoutes >= maxRoutesFromDb)
                 return SortAndCutRoutes(routes);
@@ -95,7 +95,7 @@ namespace FlightSystem.Api.Application.Managers
 
         private List<IRoute> SortAndCutRoutes(List<IRoute> routes)
         {
-            //routes.Sort(); //update
+            routes = routes.OrderBy(o=>o.timeSpan).ToList();
             try
             {
                 routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);
