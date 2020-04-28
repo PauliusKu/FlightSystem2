@@ -90,12 +90,13 @@ namespace FlightSystem.Api.Application.Managers
                     route.price += flight.price;
                 }
                 route.timeSpan = route.flights[route.flights.Count() - 1].arrives - route.flights[0].departs;
+                route.best = (int)route.timeSpan.TotalMinutes + (int)route.price;
             }
         }
 
         private List<IRoute> SortAndCutRoutes(List<IRoute> routes)
         {
-            routes = routes.OrderBy(o=>o.timeSpan).ToList();
+            routes = routes.OrderBy(o=>o.best).ToList();
             try
             {
                 routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);

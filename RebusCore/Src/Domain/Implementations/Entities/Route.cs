@@ -16,6 +16,9 @@ namespace FlightSystem.Api.Domain.Implementations.Entities
         public TimeSpan timeSpan { get; set; }
 
         [JsonProperty]
+        public int best { get; set; }
+
+        [JsonProperty]
         public List<IFlight> flights {
             get { return _flights; }
             set { _flights = value; }

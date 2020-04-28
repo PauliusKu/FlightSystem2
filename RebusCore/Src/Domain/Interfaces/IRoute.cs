@@ -9,6 +9,8 @@ namespace FlightSystem.Api.Domain.Interfaces
 
         public TimeSpan timeSpan { get; set; }
 
+        public int best { get; set; }
+
         public List<IFlight> flights { get; set; }
     }
 }
