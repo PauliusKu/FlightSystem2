@@ -9,6 +9,7 @@ services:
             - "5002:5002"
         links:
             - "rebuscore"
+            - "ms-sql-server"
     rebuscore:
         build:
             context: .
@@ -38,3 +39,13 @@ services:
             - "7687:7687"
         expose:
             - "7687"
+    ms-sql-server:
+        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+        environment:
+            ACCEPT_EULA: "Y"
+            SA_PASSWORD: "ABC123abc"
+            MSSQL_PID: "Express"
+        ports:
+            - "1433:1433"
+        expose:
+            - "1433"

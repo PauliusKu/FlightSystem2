@@ -4,13 +4,27 @@ namespace RebusNeo.Src.Domain.Implementations
 {
     public class UserInfo : IEntity, IUserInfo
     {
-        public UserInfo(string loginName, string email)
+        public UserInfo(){}
+        public UserInfo(string pLoginName, string pEmail)
         {
-            userLoginName = loginName;
-            userEmail = email;
+            loginName = pLoginName;
+            email = pEmail;
         }
-        public string userLoginName { get; set; }
 
-        public string userEmail { get; set; }
+        public UserInfo(string pLoginName, string pEmail, string pPassword)
+        {
+            loginName = pLoginName;
+            email = pEmail;
+            password = pPassword;
+        }
+
+        public int id { get; set; }
+        public string loginName { get; set; }
+
+        public string email { get; set; }
+
+        public string password { get; set; }
+
+        public string salt { get; set; }
     }
 }
