@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RebusNeo.Src.Repository.MSSQL.Common;
 
 namespace RebusNeo.Migrations
 {
     [DbContext(typeof(MSSQLContext))]
-    partial class MSSQLContextModelSnapshot : ModelSnapshot
+    [Migration("20200512211018_UserTest7")]
+    partial class UserTest7
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -14,5 +14,7 @@ namespace RebusNeo.Src.Repository.MSSQL.Common
         public DbSet<UserInfo> userInfo {get; set;}
 
         public DbSet<Token> token {get; set;}
+
+        public DbSet<PersonalInfo> personalInfo {get; set;}
     }
 }

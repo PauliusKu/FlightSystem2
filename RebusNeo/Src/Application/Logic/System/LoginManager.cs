@@ -90,6 +90,9 @@ namespace RebusNeo.Src.Application.Logic.System
             _tokenManager.SetDbContext(context);
             _tokenManager.GenerateTokenFor(_userInfo.id);
 
+            _userInfo.password = "";
+            _userInfo.salt = "";
+
             List<IEntity> entities = entityFactory.CreateEntities();
             entities.Add(_userInfo);
             return responseFactory.CreateResponse(0, "", entities, _tokenManager.GetToken());

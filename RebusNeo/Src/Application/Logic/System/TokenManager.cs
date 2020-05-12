@@ -2,6 +2,7 @@ using System;
 using RebusNeo.Src.Domain.Interfaces;
 using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Application.Interfaces.AManagers;
+using System.Linq;
 
 namespace RebusNeo.Src.Application.Logic.System
 {
@@ -16,9 +17,16 @@ namespace RebusNeo.Src.Application.Logic.System
             string tokenValue;
 
             tokenValue = tokenGenerator.Generate(32);
-            _token = entityFactory.CreateToken(tokenValue, pUserId, DateTime.UtcNow.AddMinutes(_expTime));
 
-            context.token.Add(_token);
+            _token = context.token.FirstOrDefault(o => o.userid == pUserId);
+
+            if (_token is null)
+            {
+                _token = entityFactory.CreateToken(tokenValue, pUserId, DateTime.UtcNow.AddMinutes(_expTime));
+                context.token.Add(_token);
+            }
+            else _token.token = tokenValue;
+
             context.SaveChanges();
         }
 
@@ -27,9 +35,18 @@ namespace RebusNeo.Src.Application.Logic.System
             return _token.token;
         }
 
-        public bool IsTokenValid()
+        public bool IsTokenValid(string pToken, int pUserId)
         {
-            return true;
+            try {
+                _token = context.token.First(o => o.token == pToken);
+                if (pUserId == _token.userid && DateTime.UtcNow < _token.expireDate)
+                    return true;
+            }
+            catch(Exception){
+                return false;
+            }
+
+            return false;
         }
     }
 }
