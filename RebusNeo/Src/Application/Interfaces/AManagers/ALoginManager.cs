@@ -8,9 +8,6 @@ namespace RebusNeo.Src.Application.Interfaces.AManagers
     {
         public abstract string Login(string username, string password);
 
-        public abstract void passDb(UserInfo context);
-
-        public abstract string Error(string pMsg);
-        public abstract string Ok(string username, string email);
+        public abstract string LoginChangePass(string username, string password, string newPassword);
     }
 }

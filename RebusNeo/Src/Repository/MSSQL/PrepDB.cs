@@ -21,13 +21,6 @@ namespace RebusNeo.Src.Repository.MSSQL.Common
         {
             context.Database.Migrate();
 
-            if(!context.userInfo.Any())
-            {
-                context.userInfo.AddRange(
-                    new UserInfo("aaa", "bbb"),
-                    new UserInfo("123", "123")
-                );
-            }
             context.SaveChanges();
         }
     }

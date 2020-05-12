@@ -6,9 +6,9 @@ namespace RebusNeo.Src.Application.Interfaces.Factories
 {
     public interface IResponseFactory
     {
-        public string CreateResponse(int errorCode, string errorMessage, IEnumerable<IEntity> entities);
+        public string CreateResponse(int errorCode, string errorMessage, IEnumerable<IEntity> entities, string token);
 
-        public IResponseHeader CreateResponseHeader(IResponseError error);
+        public IResponseHeader CreateResponseHeader(IResponseError error, IResponseToken token);
         public IResponseBody CreateResponseBody(IEnumerable<IEntity> entities);
 
         public IResponseError CreaterResponseError(int errorCode, string errorMessage);

@@ -14,15 +14,15 @@ namespace RebusNeo.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class LoginController : ControllerBase
+    public class ChangePassController : ControllerBase
     {
 
-        private readonly ILogger<LoginController> _logger;
+        private readonly ILogger<ChangePassController> _logger;
         private ALoginManager _loginManager;
 
         private readonly MSSQLContext _context;
 
-        public LoginController(MSSQLContext context)
+        public ChangePassController(MSSQLContext context)
         {
             _context = context;
             _loginManager = new LoginManager();
@@ -30,9 +30,9 @@ namespace RebusNeo.Src.Integration.Controllers
         }
 
         [HttpPost]
-        public string Post(string username, string password)
+        public string Post(string username, string password, string newpassword)
         {
-            return _loginManager.Login(username, password);
+            return _loginManager.LoginChangePass(username, password, newpassword);
         }
     }
 }

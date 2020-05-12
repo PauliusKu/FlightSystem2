@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Domain.Interfaces;
 
 namespace RebusNeo.Src.Repository.MSSQL.Common
 {
@@ -11,5 +12,7 @@ namespace RebusNeo.Src.Repository.MSSQL.Common
         }
 
         public DbSet<UserInfo> userInfo {get; set;}
+
+        public DbSet<Token> token {get; set;}
     }
 }

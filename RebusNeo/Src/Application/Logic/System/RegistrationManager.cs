@@ -22,13 +22,13 @@ namespace RebusNeo.Src.Application.Logic.System
             _userInfo = entityFactory.CreateUserInfo("aaa", "ccc@ccc.ccc");
             List<IEntity> entities = entityFactory.CreateEntities();
             entities.Add(_userInfo);
-            return responseFactory.CreateResponse(1, "", entities);
+            return responseFactory.CreateResponse(1, "", entities, "");
         }
 
         public override string Error(string pMsg)
         {
             List<IEntity> entities = entityFactory.CreateEntities();
-            return responseFactory.CreateResponse(1, pMsg, entities);
+            return responseFactory.CreateResponse(1, pMsg, entities, "");
         }
 
         public override string Ok(string username, string email)
@@ -36,7 +36,7 @@ namespace RebusNeo.Src.Application.Logic.System
             _userInfo = entityFactory.CreateUserInfo(username, email);
             List<IEntity> entities = entityFactory.CreateEntities();
             entities.Add(_userInfo);
-            return responseFactory.CreateResponse(0, "", entities);
+            return responseFactory.CreateResponse(0, "", entities, "");
         }
 
         public override void passDb(MSSQLContext context)
