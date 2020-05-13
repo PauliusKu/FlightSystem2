@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RebusNeo.Src.Repository.MSSQL.Common;
 
 namespace RebusNeo.Migrations
 {
     [DbContext(typeof(MSSQLContext))]
-    partial class MSSQLContextModelSnapshot : ModelSnapshot
+    [Migration("20200513094703_UserTesta")]
+    partial class UserTesta
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,48 +37,6 @@ namespace RebusNeo.Migrations
                     b.HasKey("id");
 
                     b.ToTable("balance");
-                });
-
-            modelBuilder.Entity("RebusNeo.Src.Domain.Implementations.Flight", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<decimal>("cost")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("flightId")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("flight");
-                });
-
-            modelBuilder.Entity("RebusNeo.Src.Domain.Implementations.Order", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("cost")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("datetime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("details")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("userid")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.ToTable("order");
                 });
 
             modelBuilder.Entity("RebusNeo.Src.Domain.Implementations.PersonalInfo", b =>

@@ -32,9 +32,9 @@ namespace RebusNeo.Src.Integration.Controllers
         }
 
         [HttpPost]
-        public string Post([Required] string token, [Required] int userid, string firstname, string lastname, string phonenumber, string address)
+        public string Post([Required] string token, [Required] int userid, string firstname, string lastname, string phonenumber, string country, string city, string street, string house)
         {
-            return _personalInfoManager.SetPersonalInfo(token, userid, firstname, lastname, phonenumber, address);
+            return _personalInfoManager.SetPersonalInfo(token, userid, firstname, lastname, phonenumber, country, city, street, house);
         }
 
         [HttpGet]

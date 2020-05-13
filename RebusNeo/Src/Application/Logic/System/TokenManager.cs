@@ -20,13 +20,17 @@ namespace RebusNeo.Src.Application.Logic.System
 
             _token = context.token.FirstOrDefault(o => o.userid == pUserId);
 
-            if (_token is null)
+            if (_token == null)
             {
                 _token = entityFactory.CreateToken(tokenValue, pUserId, DateTime.UtcNow.AddMinutes(_expTime));
                 context.token.Add(_token);
             }
-            else _token.token = tokenValue;
+            else {
+                _token.token = tokenValue;
+                _token.expireDate = DateTime.UtcNow.AddMinutes(_expTime);
+            }
 
+            
             context.SaveChanges();
         }
 
@@ -38,7 +42,11 @@ namespace RebusNeo.Src.Application.Logic.System
         public bool IsTokenValid(string pToken, int pUserId)
         {
             try {
-                _token = context.token.First(o => o.token == pToken);
+                _token = context.token.FirstOrDefault(o => o.token == pToken);
+
+                if (_token == null)
+                    return false;
+
                 if (pUserId == _token.userid && DateTime.UtcNow < _token.expireDate)
                     return true;
             }
