@@ -56,6 +56,34 @@ namespace RebusNeo.Src.Application.Logic.System
             return CreateOkResp();
         }
 
+        public override decimal GetPersonalBalance(int pUserId)
+        {
+            balance = context.balance.FirstOrDefault(o => o.userid == pUserId);
+
+            if (balance == null)
+                return 0;
+            return balance.balance;
+        }
+
+        public override void UpdatePersonalBalance(int pUserId, decimal pChange)
+        {
+            balance = context.balance.FirstOrDefault(o => o.userid == pUserId);
+
+            if (balance == null)
+            {
+                balance = new Balance();
+                balance.userid = pUserId;
+
+                context.Add(balance);
+            }
+            try{
+                balance.balance += Convert.ToDecimal(pChange);
+            }
+            catch{}
+
+            context.SaveChanges();
+        }
+
         private string CreateOkResp()
         {
             _tokenManager.SetDbContext(context);

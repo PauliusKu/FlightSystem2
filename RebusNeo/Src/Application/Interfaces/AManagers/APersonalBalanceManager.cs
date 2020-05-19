@@ -9,5 +9,9 @@ namespace RebusNeo.Src.Application.Interfaces.AManagers
         public abstract string AddPersonalBalance(string pToken, int pUserId, string pAddBal);
 
         public abstract string GetPersonalBalance(string pToken, int pUserId);
+
+        public abstract decimal GetPersonalBalance(int pUserId);
+
+        public abstract void UpdatePersonalBalance(int pUserId, decimal pChange);
     }
 }

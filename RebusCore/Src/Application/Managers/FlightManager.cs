@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using FlightSystem.Api.Application.Interfaces.AManagers;
 using FlightSystem.Api.Application.Interfaces.Data;
@@ -25,6 +26,23 @@ namespace FlightSystem.Api.Application.Managers
         public override IFlight GetFlightById(ulong Id)
         {
             return flightData.GetById(Id);
+        }
+
+        public override string GetStringFlightById(ulong Id)
+        {
+            try
+            {
+                List<IEntity> entities = entityFactory.CreateEntities();
+                entities.Add(flightData.GetById(Id));
+                return responseFactory.CreateResponse("", entities);
+            }
+            catch (Exception ex)
+            {
+                string message = String.Format("Exception caught: {0}", ex);
+                logger.LogMessage(message);
+                return responseFactory.CreateResponse(message, null);
+            }
+
         }
 
         public override List<IFlight> GetFlightsByTripParams(ITripParams tripParams)

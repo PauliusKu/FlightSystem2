@@ -17,5 +17,7 @@ namespace RebusNeo.Src.Application.Interfaces.AManagers
                             string passClass);
 
         public abstract string OrderJourney(string pToken, int pUserId, string pListOfFlights);
+
+        public abstract string GetOrderedFlights(string pToken, int pUserId);
     }
 }

@@ -55,6 +55,27 @@ namespace RebusNeo.Src.Application.Logic.System
             }
         }
 
+        public override string LogOut(string pToken, int pUserId)
+        {
+            try
+            {
+                _tokenManager.SetDbContext(context);
+
+                if (!_tokenManager.IsTokenValid(pToken, pUserId))
+                    return CreateErrorResp(String.Format(String.Format("{0}", "Session ended!")));
+
+                _tokenManager.DeleteToken(pToken, pUserId);
+
+                List<IEntity> entities = entityFactory.CreateEntities();
+                return responseFactory.CreateResponse(0, "", entities, "");
+            }
+
+            catch (Exception ex)
+            {
+                return CreateErrorResp(String.Format("Exception caught: {0}", ex));
+            }
+        }
+
         private string UserAuthentification(string username, string password){
             string savedPasswordHash;
 

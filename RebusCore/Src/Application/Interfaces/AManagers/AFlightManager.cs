@@ -9,5 +9,7 @@ namespace FlightSystem.Api.Application.Interfaces.AManagers
         public abstract IFlight GetFlightById(ulong Id);
 
         public abstract List<IFlight> GetFlightsByTripParams(ITripParams tripParams);
+
+        public abstract string GetStringFlightById(ulong Id);
     }
 }

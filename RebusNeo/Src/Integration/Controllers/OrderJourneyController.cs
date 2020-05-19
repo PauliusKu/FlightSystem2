@@ -34,5 +34,11 @@ namespace RebusNeo.Src.Integration.Controllers
         {
             return journeyManager.OrderJourney(token, userid, flightlist);
         }
+
+        [HttpGet]
+        public string Get([Required] string token, [Required] int userid)
+        {
+            return journeyManager.GetOrderedFlights(token, userid);
+        }
     }
 }

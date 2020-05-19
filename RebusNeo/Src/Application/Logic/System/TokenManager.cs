@@ -39,6 +39,25 @@ namespace RebusNeo.Src.Application.Logic.System
             return _token.token;
         }
 
+        public void DeleteToken(string pToken, int pUserId)
+        {
+            try {
+                _token = context.token.FirstOrDefault(o => o.token == pToken);
+
+                if (_token == null)
+                    return;
+
+                if (pUserId == _token.userid && DateTime.UtcNow < _token.expireDate)
+                {
+                    _token.expireDate = DateTime.UtcNow.AddMinutes(0);
+                    context.SaveChanges();
+                }
+            }
+            catch(Exception){
+                return;
+            }
+        }
+
         public bool IsTokenValid(string pToken, int pUserId)
         {
             try {
