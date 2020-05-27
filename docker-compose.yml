@@ -1,12 +1,25 @@
 version: '3'
 
 services:
+    rebusadmin:
+        build:
+            context: .
+            dockerfile: RebusAdmin/Dockerfile
+        ports:
+            - "5003:5003"
+        expose:
+            - "5003"
+        links:
+            - neo4j
+            - rebusneo
     rebusneo:
         build:
             context: .
             dockerfile: RebusNeo/Dockerfile
         ports:
             - "5002:5002"
+        expose:
+            - "5002"
         links:
             - "rebuscore"
             - "ms-sql-server"
@@ -18,16 +31,6 @@ services:
             - "5001:5001"
         expose:
             - "5001"
-        links:
-            - neo4j
-    rebusadmin:
-        build:
-            context: .
-            dockerfile: RebusAdmin/Dockerfile
-        ports:
-            - "5003:5003"
-        expose:
-            - "5003"
         links:
             - neo4j
     neo4j:

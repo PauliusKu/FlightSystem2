@@ -14,7 +14,7 @@ namespace RebusNeo.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class LogOutController : ControllerBase
+    public class BanUserController : ControllerBase
     {
 
         private readonly ILogger<PersonalBalanceController> _logger;
@@ -22,17 +22,17 @@ namespace RebusNeo.Src.Integration.Controllers
 
         private readonly MSSQLContext _context;
 
-        public LogOutController(MSSQLContext context)
+        public BanUserController(MSSQLContext context)
         {
             _context = context;
             loginManager = new LoginManager();
             loginManager.SetDbContext(_context);
         }
 
-        [HttpPost]
-        public string Post([Required] string token, [Required] int userid)
+        [HttpGet]
+        public string Get(string username, string action)
         {
-            return loginManager.LogOut(token, userid);
+            return loginManager.BanUser(username, action);
         }
     }
 }

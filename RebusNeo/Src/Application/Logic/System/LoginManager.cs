@@ -76,12 +76,58 @@ namespace RebusNeo.Src.Application.Logic.System
             }
         }
 
+        public override string BanUser(string username, string action)
+        {
+            try{
+                _userInfo = context.userInfo.First(o => o.loginName == username);
+
+                switch (action)
+                {
+                    case "ban":
+                        _tokenManager.SetDbContext(context);
+                        _tokenManager.DeleteToken(_userInfo.id);
+                        Ban();
+                        break;
+                    case "activate":
+                        Activate();
+                        break;
+                    case "killsession":
+                        _tokenManager.SetDbContext(context);
+                        _tokenManager.DeleteToken(_userInfo.id);
+                        break;
+                }
+
+                context.userInfo.Attach(_userInfo);
+                context.SaveChanges();
+
+            }
+            catch(Exception ex)
+            {
+                return String.Format("Exception caught: {0}", ex);
+            }
+            return "Action completed successfully";
+        }
+
+        private void Ban()
+        {
+            _userInfo.status = "BANED";
+        }
+
+        private void Activate()
+        {
+            _userInfo.status = "ACTIVE";
+        }
+
         private string UserAuthentification(string username, string password){
             string savedPasswordHash;
 
             try{
                 _userInfo = context.userInfo.First(o => o.loginName == username);
                 savedPasswordHash = _userInfo.password;
+
+                if (_userInfo.status != "ACTIVE")
+                    return "Access denied!";
+
                 /* Extract the bytes */
                 byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
                 /* Get the salt */

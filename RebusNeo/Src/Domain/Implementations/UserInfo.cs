@@ -16,6 +16,7 @@ namespace RebusNeo.Src.Domain.Implementations
             loginName = pLoginName;
             email = pEmail;
             password = pPassword;
+            status = "ACTIVE";
         }
 
         public int id { get; set; }
@@ -26,5 +27,7 @@ namespace RebusNeo.Src.Domain.Implementations
         public string password { get; set; }
 
         public string salt { get; set; }
+
+        public string status { get; set; }
     }
 }

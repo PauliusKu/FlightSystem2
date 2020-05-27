@@ -14,25 +14,25 @@ namespace RebusNeo.Src.Integration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class LogOutController : ControllerBase
+    public class ReportController : ControllerBase
     {
 
         private readonly ILogger<PersonalBalanceController> _logger;
-        private ALoginManager loginManager;
+        private AReportManager reportManager;
 
         private readonly MSSQLContext _context;
 
-        public LogOutController(MSSQLContext context)
+        public ReportController(MSSQLContext context)
         {
             _context = context;
-            loginManager = new LoginManager();
-            loginManager.SetDbContext(_context);
+            reportManager = new ReportManager();
+            reportManager.SetDbContext(_context);
         }
 
-        [HttpPost]
-        public string Post([Required] string token, [Required] int userid)
+        [HttpGet]
+        public string Get()
         {
-            return loginManager.LogOut(token, userid);
+            return reportManager.GetReport();
         }
     }
 }

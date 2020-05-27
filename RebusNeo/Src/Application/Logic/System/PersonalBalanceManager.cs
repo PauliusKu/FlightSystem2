@@ -30,6 +30,8 @@ namespace RebusNeo.Src.Application.Logic.System
 
             try{
                 balance.balance += Convert.ToDecimal(pAddBal);
+                if (balance.balance < 0)
+                    return CreateErrorResp(String.Format(String.Format("{0}", "Negative amount!")));
             }
             catch{}
 
@@ -78,6 +80,8 @@ namespace RebusNeo.Src.Application.Logic.System
             }
             try{
                 balance.balance += Convert.ToDecimal(pChange);
+                if (balance.balance < 0)
+                    return;
             }
             catch{}
 

@@ -11,5 +11,7 @@ namespace RebusNeo.Src.Domain.Interfaces
         public string password { get; set; }
 
         public string salt { get; set; }
+
+        public string status { get; set; }
     }
 }

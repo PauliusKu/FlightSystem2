@@ -5,6 +5,8 @@
 
         public static string GetDataBaseUri() { return OperatingSys.IsLinux() ? "bolt://neo4j:7687" : "bolt://localhost:7687"; }
 
+        public static string GetRebusNeoUri() { return "http://rebusneo:5002/"; }
+
         public static string GetDataBaseUsername() { return "neo4j"; }
         public static string GetDataBasePassword() { return "123"; }
 

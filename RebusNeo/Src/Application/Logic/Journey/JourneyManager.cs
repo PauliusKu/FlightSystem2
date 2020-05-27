@@ -102,6 +102,26 @@ namespace RebusNeo.Src.Application.Logic.Journey
             return responseFactory.CreateResponse(0, "", entities, _tokenManager.GetToken());
         }
 
+        public override List<OrderResp> GetOrderedFlights(int pUserId)
+        {
+            var orders = context.order.Where(o => o.userid == pUserId).Select(o => o.details);
+            List<OrderResp> ordersList = new List<OrderResp>();
+
+            List<IEntity> entities = entityFactory.CreateEntities();
+
+            foreach (var order in orders)
+            {
+                OrderResp orderResp = new OrderResp();
+                string [] rawFlights = order.Split(",");
+
+                orderResp.flights = new List<string>(rawFlights);
+
+                ordersList.Add(orderResp);
+            }
+
+            return ordersList;
+        }
+
         private string CreateErrorResp(int code, string pMsg)
         {
             List<IEntity> entities = entityFactory.CreateEntities();
