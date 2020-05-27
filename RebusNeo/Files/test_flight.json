@@ -1,0 +1,2296 @@
+{
+    "Header": {
+        "ResponseError": {
+            "ErrorCode": 0,
+            "ErrorMessage": ""
+        }
+    },
+    "ResponseBody": {
+        "Entities": [
+            {
+                "trips": [
+                    {
+                        "tripParams": {
+                            "origin": "AMS",
+                            "destination": "BRU",
+                            "depDate": "2019-10-1",
+                            "onlyDirect": false
+                        },
+                        "numOfRoutes": 20,
+                        "routes": [
+                            {
+                                "price": 25.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123495",
+                                        "flightCode": "SN-1461",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 25.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 20.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123435",
+                                        "flightCode": "SN-1451",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T19:00:00",
+                                        "arrives": "2019-10-01T19:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 35.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123375",
+                                        "flightCode": "SN-1441",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T17:00:00",
+                                        "arrives": "2019-10-01T17:30:00",
+                                        "price": 35.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 20.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123315",
+                                        "flightCode": "SN-1421",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T14:00:00",
+                                        "arrives": "2019-10-01T14:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 30.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123255",
+                                        "flightCode": "SN-1411",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T08:00:00",
+                                        "arrives": "2019-10-01T08:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 25.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123195",
+                                        "flightCode": "SN-1401",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-01T06:30:00",
+                                        "price": 25.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "-11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "120424",
+                                        "flightCode": "AF-1140",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T18:00:00",
+                                        "arrives": "2019-10-01T18:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "-11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "83447",
+                                        "flightCode": "BA-1111",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T20:30:00",
+                                        "arrives": "2019-10-01T21:20:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "12:20:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "116638",
+                                        "flightCode": "BA-1831",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T21:00:00",
+                                        "arrives": "2019-10-01T22:00:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "124213",
+                                        "flightCode": "SN-11101",
+                                        "fromAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T23:50:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "-09:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120605",
+                                        "flightCode": "AF-1211",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T09:30:00",
+                                        "arrives": "2019-10-01T10:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120424",
+                                        "flightCode": "AF-1140",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T18:00:00",
+                                        "arrives": "2019-10-01T18:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "-09:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120605",
+                                        "flightCode": "AF-1211",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T09:30:00",
+                                        "arrives": "2019-10-01T10:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120304",
+                                        "flightCode": "AF-1120",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "-06:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120545",
+                                        "flightCode": "AF-1201",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T06:30:00",
+                                        "arrives": "2019-10-01T07:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120424",
+                                        "flightCode": "AF-1140",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T18:00:00",
+                                        "arrives": "2019-10-01T18:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 100.0,
+                                "timeSpan": "-06:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120545",
+                                        "flightCode": "AF-1201",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T06:30:00",
+                                        "arrives": "2019-10-01T07:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120304",
+                                        "flightCode": "AF-1120",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "-11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "83387",
+                                        "flightCode": "BA-1109",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T17:30:00",
+                                        "arrives": "2019-10-01T18:20:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "12:20:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "116578",
+                                        "flightCode": "BA-1821",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T15:00:00",
+                                        "arrives": "2019-10-01T16:00:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "124213",
+                                        "flightCode": "SN-11101",
+                                        "fromAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T23:50:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "-11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120665",
+                                        "flightCode": "AF-1221",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T11:30:00",
+                                        "arrives": "2019-10-01T13:30:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "120364",
+                                        "flightCode": "AF-1130",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T15:00:00",
+                                        "arrives": "2019-10-01T15:50:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "-09:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120605",
+                                        "flightCode": "AF-1211",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T09:30:00",
+                                        "arrives": "2019-10-01T10:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "83447",
+                                        "flightCode": "BA-1111",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T20:30:00",
+                                        "arrives": "2019-10-01T21:20:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "122765",
+                                        "flightCode": "SN-1131",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "14:20:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120605",
+                                        "flightCode": "AF-1211",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T09:30:00",
+                                        "arrives": "2019-10-01T10:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "116638",
+                                        "flightCode": "BA-1831",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T21:00:00",
+                                        "arrives": "2019-10-01T22:00:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "124213",
+                                        "flightCode": "SN-11101",
+                                        "fromAirport": {
+                                            "fullName": "London-Gatwick Airport",
+                                            "type": "Airport",
+                                            "code": "LGW",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T23:50:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "06:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120605",
+                                        "flightCode": "AF-1211",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T09:30:00",
+                                        "arrives": "2019-10-01T10:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120304",
+                                        "flightCode": "AF-1120",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122705",
+                                        "flightCode": "SN-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T15:00:00",
+                                        "arrives": "2019-10-01T16:00:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 110.0,
+                                "timeSpan": "09:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "120545",
+                                        "flightCode": "AF-1201",
+                                        "fromAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T06:30:00",
+                                        "arrives": "2019-10-01T07:30:00",
+                                        "price": 50.0
+                                    },
+                                    {
+                                        "flightId": "120304",
+                                        "flightCode": "AF-1120",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122705",
+                                        "flightCode": "SN-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-01T15:00:00",
+                                        "arrives": "2019-10-01T16:00:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tripParams": {
+                            "origin": "BRU",
+                            "destination": "AMS",
+                            "depDate": "2019-10-1",
+                            "onlyDirect": false
+                        },
+                        "numOfRoutes": 20,
+                        "routes": [
+                            {
+                                "price": 25.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123194",
+                                        "flightCode": "SN-1400",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-01T06:30:00",
+                                        "price": 25.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 30.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123254",
+                                        "flightCode": "SN-1410",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T08:00:00",
+                                        "arrives": "2019-10-01T08:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 20.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123314",
+                                        "flightCode": "SN-1420",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T14:00:00",
+                                        "arrives": "2019-10-01T14:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 35.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123374",
+                                        "flightCode": "SN-1440",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T17:00:00",
+                                        "arrives": "2019-10-01T17:30:00",
+                                        "price": 35.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 20.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123434",
+                                        "flightCode": "SN-1450",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T19:00:00",
+                                        "arrives": "2019-10-01T19:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 25.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123494",
+                                        "flightCode": "SN-1460",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 25.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 70.0,
+                                "timeSpan": "10.13:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122604",
+                                        "flightCode": "SN-11100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-11T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122665",
+                                        "flightCode": "SN-11111",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-11T09:00:00",
+                                        "arrives": "2019-10-11T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "123454",
+                                        "flightCode": "SN-11450",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-11T19:00:00",
+                                        "arrives": "2019-10-11T19:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 70.0,
+                                "timeSpan": "10.08:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122604",
+                                        "flightCode": "SN-11100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-11T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122665",
+                                        "flightCode": "SN-11111",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-11T09:00:00",
+                                        "arrives": "2019-10-11T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "123334",
+                                        "flightCode": "SN-11420",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-11T14:00:00",
+                                        "arrives": "2019-10-11T14:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 80.0,
+                                "timeSpan": "16:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123775",
+                                        "flightCode": "SN-1700",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Frankfurt Airport",
+                                            "type": "Airport",
+                                            "code": "FRA",
+                                            "cityName": "Frankfurt",
+                                            "countryName": "DE"
+                                        },
+                                        "departs": "2019-10-01T07:00:00",
+                                        "arrives": "2019-10-01T07:50:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "122224",
+                                        "flightCode": "LH-1330",
+                                        "fromAirport": {
+                                            "fullName": "Frankfurt Airport",
+                                            "type": "Airport",
+                                            "code": "FRA",
+                                            "cityName": "Frankfurt",
+                                            "countryName": "DE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T19:30:00",
+                                        "arrives": "2019-10-01T20:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 80.0,
+                                "timeSpan": "14:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122644",
+                                        "flightCode": "SN-1110",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T09:00:00",
+                                        "arrives": "2019-10-01T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "120425",
+                                        "flightCode": "AF-1141",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T18:00:00",
+                                        "arrives": "2019-10-01T18:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 80.0,
+                                "timeSpan": "14:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122644",
+                                        "flightCode": "SN-1110",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T09:00:00",
+                                        "arrives": "2019-10-01T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "120305",
+                                        "flightCode": "AF-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 80.0,
+                                "timeSpan": "00:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122764",
+                                        "flightCode": "SN-1130",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T23:00:00",
+                                        "arrives": "2019-10-01T00:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "120305",
+                                        "flightCode": "AF-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 80.0,
+                                "timeSpan": "10.13:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122604",
+                                        "flightCode": "SN-11100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-11T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122725",
+                                        "flightCode": "SN-11121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-11T15:00:00",
+                                        "arrives": "2019-10-11T16:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "123454",
+                                        "flightCode": "SN-11450",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-11T19:00:00",
+                                        "arrives": "2019-10-11T19:30:00",
+                                        "price": 20.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 85.0,
+                                "timeSpan": "10.17:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122604",
+                                        "flightCode": "SN-11100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-11T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122725",
+                                        "flightCode": "SN-11121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-11T15:00:00",
+                                        "arrives": "2019-10-11T16:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "123514",
+                                        "flightCode": "SN-11460",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-11T23:00:00",
+                                        "arrives": "2019-10-11T23:30:00",
+                                        "price": 25.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 85.0,
+                                "timeSpan": "10.11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122604",
+                                        "flightCode": "SN-11100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-11T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "122665",
+                                        "flightCode": "SN-11111",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "departs": "2019-10-11T09:00:00",
+                                        "arrives": "2019-10-11T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "123394",
+                                        "flightCode": "SN-11440",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-11T17:00:00",
+                                        "arrives": "2019-10-11T17:30:00",
+                                        "price": 35.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "16:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "123775",
+                                        "flightCode": "SN-1700",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Frankfurt Airport",
+                                            "type": "Airport",
+                                            "code": "FRA",
+                                            "cityName": "Frankfurt",
+                                            "countryName": "DE"
+                                        },
+                                        "departs": "2019-10-01T07:00:00",
+                                        "arrives": "2019-10-01T07:50:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "122164",
+                                        "flightCode": "LH-1320",
+                                        "fromAirport": {
+                                            "fullName": "Frankfurt Airport",
+                                            "type": "Airport",
+                                            "code": "FRA",
+                                            "cityName": "Frankfurt",
+                                            "countryName": "DE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T15:30:00",
+                                        "arrives": "2019-10-01T16:50:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "17:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122584",
+                                        "flightCode": "SN-1100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-01T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120425",
+                                        "flightCode": "AF-1141",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T18:00:00",
+                                        "arrives": "2019-10-01T18:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "17:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122584",
+                                        "flightCode": "SN-1100",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T06:00:00",
+                                        "arrives": "2019-10-01T07:00:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120305",
+                                        "flightCode": "AF-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "14:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122644",
+                                        "flightCode": "SN-1110",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T09:00:00",
+                                        "arrives": "2019-10-01T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "83446",
+                                        "flightCode": "BA-1110",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T20:30:00",
+                                        "arrives": "2019-10-01T21:20:00",
+                                        "price": 40.0
+                                    },
+                                    {
+                                        "flightId": "120784",
+                                        "flightCode": "AF-1240",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T22:30:00",
+                                        "arrives": "2019-10-01T23:30:00",
+                                        "price": 30.0
+                                    }
+                                ]
+                            },
+                            {
+                                "price": 90.0,
+                                "timeSpan": "11:30:00",
+                                "flights": [
+                                    {
+                                        "flightId": "122644",
+                                        "flightCode": "SN-1110",
+                                        "fromAirport": {
+                                            "fullName": "Brussels Airport",
+                                            "type": "Airport",
+                                            "code": "BRU",
+                                            "cityName": "Brussels",
+                                            "countryName": "BE"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "departs": "2019-10-01T09:00:00",
+                                        "arrives": "2019-10-01T10:00:00",
+                                        "price": 20.0
+                                    },
+                                    {
+                                        "flightId": "120305",
+                                        "flightCode": "AF-1121",
+                                        "fromAirport": {
+                                            "fullName": "Heathrow Airport",
+                                            "type": "Airport",
+                                            "code": "LHR",
+                                            "cityName": "London",
+                                            "countryName": "GB"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "departs": "2019-10-01T12:00:00",
+                                        "arrives": "2019-10-01T12:50:00",
+                                        "price": 30.0
+                                    },
+                                    {
+                                        "flightId": "120724",
+                                        "flightCode": "AF-1230",
+                                        "fromAirport": {
+                                            "fullName": "Charles de Gaulle Airport",
+                                            "type": "Airport",
+                                            "code": "CDG",
+                                            "cityName": "Paris",
+                                            "countryName": "FR"
+                                        },
+                                        "toAirport": {
+                                            "fullName": "Amsterdam Airport Schiphol",
+                                            "type": "Airport",
+                                            "code": "AMS",
+                                            "cityName": "Amsterdam",
+                                            "countryName": "NL"
+                                        },
+                                        "departs": "2019-10-01T19:30:00",
+                                        "arrives": "2019-10-01T20:30:00",
+                                        "price": 40.0
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "numOfPass": 1,
+                "passClass": "economy"
+            }
+        ]
+    }
+}
