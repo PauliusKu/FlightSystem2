@@ -1,1 +1,15 @@
-test
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore RebusNeo/RebusNeo.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./build_output RebusNeo/RebusNeo.csproj
+artifacts:
+  files:
+    - CodeBuild-RebusNeo/build_output/**/*
+    - scripts/**/*
+    - appspec.yml
