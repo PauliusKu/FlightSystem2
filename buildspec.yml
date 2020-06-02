@@ -10,4 +10,4 @@ phases:
       - dotnet publish -c release -o ./build_output RebusNeo/RebusNeo.csproj
 artifacts:
   files:
-    - CodeBuild-RebusNeo/build_output/**/*
+    - RebusNeo/build_output/**/*
