@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: /
-    destination: /src
+  - source: /appspec.yaml
+    destination: /src/appspec.yaml
 # hooks:
 #   BeforeInstall:
 #     - location: scripts/install_dependencies.sh
