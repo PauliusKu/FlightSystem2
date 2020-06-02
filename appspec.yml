@@ -4,19 +4,15 @@ files:
   - source: /
     destination: /src/Rebus
 hooks:
-#   BeforeInstall:
-#     - location: scripts/install_dependencies.sh
-#       timeout: 300
-#       runas: root
-  AfterInstall:
-    - location: scripts/install.sh
+  BeforeInstall:
+    - location: Scripts/install.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start.sh
+    - location: Scripts/start.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop.sh
+    - location: Scripts/stop.sh
       timeout: 300
       runas: root

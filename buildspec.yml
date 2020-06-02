@@ -14,7 +14,7 @@ artifacts:
     - RebusCore/**/*
     - Neo4J/**/*
     - RebusAdmin/**/*
-    - scripts/**/*
+    - Scripts/**/*
     - appspec.yml
     - buildspec.yml
     - docker-compose.yml
