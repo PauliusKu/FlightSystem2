@@ -10,4 +10,5 @@ phases:
       - dotnet publish -c release -o ./RebusNeo/build_output RebusNeo/RebusNeo.csproj
 artifacts:
   files:
+    - appspec.yml
     - RebusNeo/build_output/**/*
