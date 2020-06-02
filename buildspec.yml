@@ -10,4 +10,10 @@ phases:
       - dotnet publish -c release -o ./RebusNeo/build_output RebusNeo/RebusNeo.csproj
 artifacts:
   files:
-    - **/*.*
+    - RebusNeo/**/*
+    - RebusCore/**/*
+    - Neo4J/**/*
+    - RebusAdmin/**/*
+    - appspec.yml
+    - buildspec.yml
+    - docker-compose.yml
