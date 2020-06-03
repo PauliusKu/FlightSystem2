@@ -6,7 +6,7 @@
         public static string GetDataBaseUri() { return "bolt://neo4j:7687"; }
 
         public static string GetDataBaseUsername() { return "neo4j"; }
-        public static string GetDataBasePassword() { return "123"; }
+        public static string GetDataBasePassword() { return "neo4j"; }
 
         public static string GetBackupFilePath() { return @"C:\Users\Paulius\Desktop\Dummies\"; }
 
