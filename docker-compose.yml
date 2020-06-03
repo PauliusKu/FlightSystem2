@@ -34,6 +34,8 @@ services:
         links:
             - neo4j
     neo4j:
+        environment:
+            - NEO4J_AUTH=neo4j/123
         build:
             context: .
             dockerfile: Neo4J/Dockerfile

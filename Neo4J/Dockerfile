@@ -1,4 +1,3 @@
 #Neo4j with some plugins.
 FROM neo4j:3.5.12
-ENV NEO4J_AUTH=neo4j/123
 CMD [ "neo4j" ]
