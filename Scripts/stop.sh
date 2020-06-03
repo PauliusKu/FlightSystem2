@@ -1,6 +1,4 @@
 #!/bin/sh
 
-sudo service docker start
+sudo docker kill $(sudo docker ps -q)
 
-cd /src/Rebus
-sudo docker-compose stop
