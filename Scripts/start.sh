@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /src/Rebus
-sudo docker-compose up -d
+sudo docker-compose up -d --build
