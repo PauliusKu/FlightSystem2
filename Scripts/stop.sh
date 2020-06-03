@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo docker kill $(sudo docker ps -q) 2>/dev/null
+sudo docker kill $(sudo docker ps -q)
 
