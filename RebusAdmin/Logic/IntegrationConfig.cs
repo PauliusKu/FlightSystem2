@@ -3,7 +3,7 @@
     public static class IntegrationConfig
     {
 
-        public static string GetDataBaseUri() { return OperatingSys.IsLinux() ? "bolt://54.175.189.247:7687" : "bolt://localhost:7687"; }
+        public static string GetDataBaseUri() { return OperatingSys.IsLinux() ? "bolt://54.163.141.16:7687" : "bolt://localhost:7687"; }
 
         public static string GetRebusNeoUri() { return "http://rebusneo:5002/"; }
 
