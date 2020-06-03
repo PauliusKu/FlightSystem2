@@ -4,7 +4,7 @@ files:
   - source: /
     destination: /src/Rebus
 hooks:
-  BeforeInstall:
+  AfterInstall:
     - location: Scripts/install.sh
       timeout: 300
       runas: root
