@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Restore started on `date`
+      - dotnet restore RebusNeo/RebusNeo.csproj
+  build:
+    commands:
+      - echo Build started on `date`
+      - dotnet publish -c release -o ./RebusNeo/build_output RebusNeo/RebusNeo.csproj
+      - mv docker-compose-test-env.yml docker-compose.yml
+artifacts:
+  files:
+    - RebusNeo/**/*
+    - RebusCore/**/*
+    - Neo4J/**/*
+    - RebusAdmin/**/*
+    - Scripts/**/*
+    - appspec.yml
+    - buildspec.yml
+    - docker-compose.yml

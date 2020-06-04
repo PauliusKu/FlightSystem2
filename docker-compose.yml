@@ -10,7 +10,6 @@ services:
         expose:
             - "5003"
         links:
-            - neo4j
             - rebusneo
     rebusneo:
         build:
@@ -22,7 +21,6 @@ services:
             - "5002"
         links:
             - "rebuscore"
-            - "ms-sql-server"
     rebuscore:
         build:
             context: .
@@ -31,26 +29,3 @@ services:
             - "5001:5001"
         expose:
             - "5001"
-        links:
-            - neo4j
-    neo4j:
-        environment:
-            - NEO4J_AUTH=neo4j/123
-        build:
-            context: .
-            dockerfile: Neo4J/Dockerfile
-        ports:
-            - "7474:7474"
-            - "7687:7687"
-        expose:
-            - "7687"
-    ms-sql-server:
-        image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
-        environment:
-            ACCEPT_EULA: "Y"
-            SA_PASSWORD: "ABC123abc"
-            MSSQL_PID: "Express"
-        ports:
-            - "1433:1433"
-        expose:
-            - "1433"
