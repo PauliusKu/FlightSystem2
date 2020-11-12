@@ -60,6 +60,8 @@ namespace RebusNeo.Src.Application.Logic.Journey
             _order.datetime = DateTime.UtcNow;
             _order.cost = totalCost;
 
+            _order = new Order(pUserId, totalCost, pListOfFlights, DateTime.UtcNow);
+
             using (var tran = context.Database.BeginTransaction()) {
                 try {
                     context.Add(_order);

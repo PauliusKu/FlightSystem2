@@ -16,6 +16,8 @@ namespace RebusNeo.Src.Application.Logic.System
         private UserInfo _userInfo;
         private TokenManager _tokenManager = new TokenManager();
 
+        private const int minPasswordLength = 8;
+
         private int _userId; 
 
         public override string Login(string username, string password)
@@ -189,7 +191,7 @@ namespace RebusNeo.Src.Application.Logic.System
 
         private bool IsPasswordValid(string password)
         {
-            if (password.Length < 8)
+            if (password.Length < minPasswordLength)
                 return false;
             return true;
         }
