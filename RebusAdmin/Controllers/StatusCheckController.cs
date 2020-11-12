@@ -9,7 +9,7 @@ namespace RebusAdmin.Controllers
     public class StatusCheckController : ControllerBase
     {
         private readonly ILogger<StatusCheckController> _logger;
-        private StatusManager _statusManager = new StatusManager();
+        private readonly StatusManager _statusManager = new StatusManager();
 
         public StatusCheckController(ILogger<StatusCheckController> logger)
         {

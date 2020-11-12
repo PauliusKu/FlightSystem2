@@ -9,7 +9,7 @@ namespace RebusAdmin.Controllers
     public class DataUpdate : ControllerBase
     {
         private readonly ILogger<DataUpdate> _logger;
-        private DataUpdateManager _dataUpdateManager = new DataUpdateManager();
+        private readonly DataUpdateManager _dataUpdateManager = new DataUpdateManager();
 
         public DataUpdate(ILogger<DataUpdate> logger)
         {

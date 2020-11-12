@@ -31,25 +31,25 @@ namespace RebusNeo.Src.Application.Logic.System
                 context.Add(_personalInfo);
             }
 
-            if (!(pFirstName == null))
+            if (pFirstName != null)
                 _personalInfo.firstname = pFirstName;
 
-            if (!(pLastName == null))
+            if (pLastName != null)
                 _personalInfo.lastname = pLastName;
 
-            if (!(pPhonenumber == null))
+            if (pPhonenumber != null)
                 _personalInfo.phonenumber = pPhonenumber;
 
-            if (!(pCountry == null))
+            if (pCountry != null)
                 _personalInfo.country = pCountry;
 
-            if (!(pCity == null))
+            if (pCity != null)
                 _personalInfo.city = pCity;
 
-            if (!(pStreet == null))
+            if (pStreet != null)
                 _personalInfo.street = pStreet;
 
-            if (!(pHouse == null))
+            if (pHouse != null)
                 _personalInfo.house = pHouse;
 
             context.SaveChanges();
