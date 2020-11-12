@@ -31,9 +31,9 @@ namespace RebusNeo.Src.Integration.Controllers
         [HttpPost]
         public string Post(string username, string email, string password)
         {
-            username.Trim();
-            email.Trim();
-            password.Trim();
+            username = username.Trim();
+            email = email.Trim();
+            password = password.Trim();
 
             try {
                 var a = _context.userInfo.First(o => o.loginName == username).loginName;
