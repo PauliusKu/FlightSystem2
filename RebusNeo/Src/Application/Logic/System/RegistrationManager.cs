@@ -1,13 +1,9 @@
-using RebusNeo.Src.Application.Interfaces.AManagers;
-using RebusNeo.Src.Domain.Interfaces;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System;
-using RebusNeo.Src.Repository.MSSQL.Common;
-using RebusNeo.Src.Domain.Implementations;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RebusNeo.Src.Application.Interfaces.AManagers;
+using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Domain.Interfaces;
+using RebusNeo.Src.Repository.MSSQL.Common;
+using System.Collections.Generic;
 
 namespace RebusNeo.Src.Application.Logic.System
 {
@@ -17,7 +13,7 @@ namespace RebusNeo.Src.Application.Logic.System
         private IUserInfo _userInfo;
 
         private MSSQLContext _context;
-        public override string Register(string username, string email,string password)
+        public override string Register(string username, string email, string password)
         {
             _userInfo = entityFactory.CreateUserInfo("aaa", "ccc@ccc.ccc");
             List<IEntity> entities = entityFactory.CreateEntities();
@@ -48,5 +44,5 @@ namespace RebusNeo.Src.Application.Logic.System
         {
             return _context.userInfo;
         }
-    } 
+    }
 }

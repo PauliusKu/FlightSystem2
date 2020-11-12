@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using RebusNeo.Src.Application.Interfaces.Factories;
 using RebusNeo.Src.Application.Interfaces.IServices;
-using RebusNeo.Src.Application.Interfaces.Factories;
 using RebusNeo.Src.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace RebusNeo.Src.Integration.Common.Services.Response
 {

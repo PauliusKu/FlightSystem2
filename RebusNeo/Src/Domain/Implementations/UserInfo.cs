@@ -4,7 +4,7 @@ namespace RebusNeo.Src.Domain.Implementations
 {
     public class UserInfo : IEntity, IUserInfo
     {
-        public UserInfo(){}
+        public UserInfo() { }
         public UserInfo(string pLoginName, string pEmail)
         {
             loginName = pLoginName;

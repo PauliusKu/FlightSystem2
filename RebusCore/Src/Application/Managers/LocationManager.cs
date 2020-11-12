@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using FlightSystem.Api.Application.Interfaces.AManagers;
+﻿using FlightSystem.Api.Application.Interfaces.AManagers;
 using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace FlightSystem.Api.Application.Managers
 {
@@ -11,7 +11,8 @@ namespace FlightSystem.Api.Application.Managers
 
         public override string ManageLocations()
         {
-            try { 
+            try
+            {
 
                 ILocationsData locationsData = dataFactory.CreateLocationsData();
                 ILocations locations = locationsData.GetLocationsAll();
@@ -24,7 +25,7 @@ namespace FlightSystem.Api.Application.Managers
 
                 List<IEntity> entities = entityFactory.CreateEntities();
                 entities.Add(locations);
-                
+
                 return responseFactory.CreateResponse("", entities);
 
             }
@@ -34,7 +35,7 @@ namespace FlightSystem.Api.Application.Managers
                 logger.LogMessage(message);
                 return responseFactory.CreateResponse(message, null);
             }
-            
+
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FlightSystem.Api.Application.Interfaces.AManagers;
+﻿using FlightSystem.Api.Application.Interfaces.AManagers;
 using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FlightSystem.Api.Application.Managers
 {

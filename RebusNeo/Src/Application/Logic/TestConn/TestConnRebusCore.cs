@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RebusNeo.Src.Repository.RebusCore.Data;
+﻿using RebusNeo.Src.Repository.RebusCore.Data;
 
 namespace RebusNeo.Src.Application.Logic.TestConn
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RebusAdmin.Logic;
 
@@ -19,7 +18,7 @@ namespace RebusAdmin.Controllers
         [HttpGet]
         public string Get(string userName, string action)
         {
-            return AsyncHelper.RunSync(() => WebApiClient.Call(IntegrationConfig.GetRebusNeoUri() + "banuser?username=" + userName + "&action=" + action)); 
+            return AsyncHelper.RunSync(() => WebApiClient.Call(IntegrationConfig.GetRebusNeoUri() + "banuser?username=" + userName + "&action=" + action));
         }
     }
 }

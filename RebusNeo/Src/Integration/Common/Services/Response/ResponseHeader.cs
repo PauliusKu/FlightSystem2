@@ -1,5 +1,5 @@
-﻿using RebusNeo.Src.Application.Interfaces.IServices;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using RebusNeo.Src.Application.Interfaces.IServices;
 
 namespace RebusNeo.Src.Integration.Common.Services.Response
 {
@@ -17,9 +17,9 @@ namespace RebusNeo.Src.Integration.Common.Services.Response
         }
 
         [JsonProperty]
-        public IResponseError ResponseError { get => _responseError;}
+        public IResponseError ResponseError { get => _responseError; }
 
         [JsonProperty]
-        public IResponseToken ResponseToken { get => _responseToken;}
+        public IResponseToken ResponseToken { get => _responseToken; }
     }
 }

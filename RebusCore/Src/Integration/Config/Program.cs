@@ -1,8 +1,8 @@
-using System;
 using FlightSystem.Api.Repository.Neo4J.Common;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace FlightSystem.Api.Integration.Config
 {

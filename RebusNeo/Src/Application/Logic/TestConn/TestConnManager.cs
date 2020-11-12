@@ -1,9 +1,5 @@
-﻿using System;
+﻿using RebusNeo.Src.Application.Interfaces.AManagers;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RebusNeo.Src.Application.Interfaces.AManagers;
-using RebusNeo.Src.Application.Interfaces.IData;
 
 namespace RebusNeo.Src.Application.Logic.TestConn
 {

@@ -1,6 +1,6 @@
-﻿using System;
-using FlightSystem.Api.Integration.Config;
+﻿using FlightSystem.Api.Integration.Config;
 using Neo4j.Driver.V1;
+using System;
 
 namespace FlightSystem.Api.Repository.Neo4J.Common
 {
@@ -14,7 +14,7 @@ namespace FlightSystem.Api.Repository.Neo4J.Common
             {
                 return GetSession().Run(query);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }

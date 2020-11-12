@@ -2,7 +2,7 @@
 {
     public interface IResponse
     {
-        public IResponseHeader Header { get;}
-        public IResponseBody ResponseBody { get;}
+        public IResponseHeader Header { get; }
+        public IResponseBody ResponseBody { get; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System;
-using RebusNeo.Src.Application.Interfaces.IServices;
+﻿using RebusNeo.Src.Application.Interfaces.IServices;
+using System;
 
 namespace RebusNeo.Src.Integration.Common.Services.Converters
 {

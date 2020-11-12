@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Data;
-using System.Threading.Tasks;
-using RebusNeo.Src.Application.Interfaces.AManagers;
+﻿using RebusNeo.Src.Application.Interfaces.AManagers;
 using RebusNeo.Src.Application.Interfaces.IData;
 using RebusNeo.Src.Application.Logic.System;
-using RebusNeo.Src.Repository.RebusCore.Data;
-using RebusNeo.Src.Domain.Interfaces;
 using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Domain.Interfaces;
+using RebusNeo.Src.Repository.RebusCore.Data;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace RebusNeo.Src.Application.Logic.Journey
 {
@@ -62,13 +61,17 @@ namespace RebusNeo.Src.Application.Logic.Journey
 
             _order = new Order(pUserId, totalCost, pListOfFlights, DateTime.UtcNow);
 
-            using (var tran = context.Database.BeginTransaction()) {
-                try {
+            using (var tran = context.Database.BeginTransaction())
+            {
+                try
+                {
                     context.Add(_order);
                     personalBalanceManager.UpdatePersonalBalance(pUserId, -_order.cost);
 
                     tran.Commit();
-                } catch {
+                }
+                catch
+                {
                     tran.Rollback();
                     return CreateErrorResp(1000, String.Format("{0}", "System error!"));
                 }
@@ -91,7 +94,7 @@ namespace RebusNeo.Src.Application.Logic.Journey
             foreach (var order in orders)
             {
                 OrderResp orderResp = new OrderResp();
-                string [] rawFlights = order.Split(",");
+                string[] rawFlights = order.Split(",");
 
                 orderResp.flights = new List<string>(rawFlights);
 
@@ -114,7 +117,7 @@ namespace RebusNeo.Src.Application.Logic.Journey
             foreach (var order in orders)
             {
                 OrderResp orderResp = new OrderResp();
-                string [] rawFlights = order.Split(",");
+                string[] rawFlights = order.Split(",");
 
                 orderResp.flights = new List<string>(rawFlights);
 
@@ -149,24 +152,26 @@ namespace RebusNeo.Src.Application.Logic.Journey
 
         private bool IsFlightsValid(string pListOfFlights)
         {
-            try{
+            try
+            {
                 FlightManager flightManager = new FlightManager();
 
                 List<string> flightIds = new List<string>(pListOfFlights.Split(","));
                 foreach (var flightid in flightIds)
                 {
                     var flight = flightManager.GetFlight(Convert.ToUInt64(flightid));
-                    if(!flight.Contains("\"ErrorCode\":0,"))
+                    if (!flight.Contains("\"ErrorCode\":0,"))
                     {
                         return false;
                     }
 
                     var str = flight.Substring(flight.IndexOf(priceStringInJSON) + priceStringInJSON.Length);
                     totalCost += Convert.ToDecimal(str.Substring(0, str.IndexOf("}")));
-                }    
+                }
                 return true;
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return false;
             }
 

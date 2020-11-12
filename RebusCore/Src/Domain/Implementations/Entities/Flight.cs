@@ -1,6 +1,6 @@
-using System;
 using FlightSystem.Api.Domain.Interfaces;
 using Newtonsoft.Json;
+using System;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {
@@ -16,17 +16,17 @@ namespace FlightSystem.Api.Domain.Implementations.Entities
         public string flightCode { get; set; }
 
         [JsonProperty]
-        public IAirport fromAirport 
+        public IAirport fromAirport
         {
             get { return _fromAirport; }
-            set { _fromAirport = (Airport)value; } 
-       } 
+            set { _fromAirport = (Airport)value; }
+        }
 
         [JsonProperty]
-        public IAirport toAirport 
+        public IAirport toAirport
         {
             get { return _toAirport; }
-            set { _toAirport = (Airport)value; } 
+            set { _toAirport = (Airport)value; }
         }
 
         [JsonProperty]

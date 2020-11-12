@@ -2,6 +2,6 @@
 {
     public interface IResponseHeader
     {
-        public IResponseError ResponseError { get;}
+        public IResponseError ResponseError { get; }
     }
 }

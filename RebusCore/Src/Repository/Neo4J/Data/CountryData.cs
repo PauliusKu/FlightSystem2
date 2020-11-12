@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using FlightSystem.Api.Application.Interfaces.Data;
+﻿using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Implementations.Entities;
 using FlightSystem.Api.Repository.Neo4J.Common;
 using Neo4j.Driver.V1;
+using System.Collections.Generic;
 
 namespace FlightSystem.Api.Repository.Neo4J.Data
 {

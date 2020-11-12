@@ -1,7 +1,6 @@
-using System;
-using RebusNeo.Src.Domain.Interfaces;
-using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Application.Interfaces.AManagers;
+using RebusNeo.Src.Domain.Implementations;
+using System;
 using System.Linq;
 
 namespace RebusNeo.Src.Application.Logic.System
@@ -25,12 +24,13 @@ namespace RebusNeo.Src.Application.Logic.System
                 _token = entityFactory.CreateToken(tokenValue, pUserId, DateTime.UtcNow.AddMinutes(_expTime));
                 context.token.Add(_token);
             }
-            else {
+            else
+            {
                 _token.token = tokenValue;
                 _token.expireDate = DateTime.UtcNow.AddMinutes(_expTime);
             }
 
-            
+
             context.SaveChanges();
         }
 
@@ -41,7 +41,8 @@ namespace RebusNeo.Src.Application.Logic.System
 
         public void DeleteToken(string pToken, int pUserId)
         {
-            try {
+            try
+            {
                 _token = context.token.FirstOrDefault(o => o.token == pToken);
 
                 if (_token == null)
@@ -53,14 +54,16 @@ namespace RebusNeo.Src.Application.Logic.System
                     context.SaveChanges();
                 }
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return;
             }
         }
 
         public void DeleteToken(int pUserId)
         {
-            try {
+            try
+            {
                 _token = context.token.FirstOrDefault(o => o.userid == pUserId);
 
                 if (_token == null)
@@ -69,14 +72,16 @@ namespace RebusNeo.Src.Application.Logic.System
                 _token.expireDate = DateTime.UtcNow.AddMinutes(0);
                 context.SaveChanges();
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return;
             }
         }
 
         public bool IsTokenValid(string pToken, int pUserId)
         {
-            try {
+            try
+            {
                 _token = context.token.FirstOrDefault(o => o.token == pToken);
 
                 if (_token == null)
@@ -85,7 +90,8 @@ namespace RebusNeo.Src.Application.Logic.System
                 if (pUserId == _token.userid && DateTime.UtcNow < _token.expireDate)
                     return true;
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return false;
             }
 
@@ -94,13 +100,16 @@ namespace RebusNeo.Src.Application.Logic.System
 
         public bool HasValidToken(int pUserId)
         {
-            try {
-                foreach(var token in context.token) {
+            try
+            {
+                foreach (var token in context.token)
+                {
                     if (pUserId == token.userid && DateTime.UtcNow < token.expireDate)
                         return true;
                 }
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return false;
             }
             return false;
@@ -108,7 +117,8 @@ namespace RebusNeo.Src.Application.Logic.System
 
         public DateTime GetTokenExpDate(int pUserId)
         {
-            try {
+            try
+            {
                 _token = context.token.FirstOrDefault(o => o.userid == pUserId);
 
                 if (_token == null)
@@ -116,7 +126,8 @@ namespace RebusNeo.Src.Application.Logic.System
 
                 return _token.expireDate;
             }
-            catch(Exception){
+            catch (Exception)
+            {
                 return new DateTime();
             }
         }

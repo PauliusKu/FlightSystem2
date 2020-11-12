@@ -1,9 +1,6 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RebusAdmin.Logic;
-using System.Net.Http;
-using System.Net.Http.Headers;
 
 namespace RebusAdmin.Controllers
 {
@@ -21,7 +18,7 @@ namespace RebusAdmin.Controllers
         [HttpGet]
         public string GetAdmin(int userid, string amount)
         {
-            return AsyncHelper.RunSync(() => WebApiClient.Call(IntegrationConfig.GetRebusNeoUri() + "balanceadmin?userid=" + userid + "&amount=" + amount)); 
+            return AsyncHelper.RunSync(() => WebApiClient.Call(IntegrationConfig.GetRebusNeoUri() + "balanceadmin?userid=" + userid + "&amount=" + amount));
         }
     }
 }

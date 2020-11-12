@@ -1,13 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RebusNeo.Src.Application.Interfaces.AManagers;
 using RebusNeo.Src.Application.Logic.System;
-using RebusNeo.Src.Repository.MSSQL.Common;
 using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Repository.MSSQL.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 
 namespace RebusNeo.Src.Integration.Controllers
@@ -35,21 +34,26 @@ namespace RebusNeo.Src.Integration.Controllers
             email = email.Trim();
             password = password.Trim();
 
-            try {
+            try
+            {
                 var a = _context.userInfo.First(o => o.loginName == username).loginName;
                 return _registrationManager.Error("This Username is already used!");
             }
-            catch (Exception){
+            catch (Exception)
+            {
             }
 
-            if (username.Length < 8 || password.Length < 8){
+            if (username.Length < 8 || password.Length < 8)
+            {
                 return _registrationManager.Error("Username and Password cannot contain less than 8 letters!");
             }
 
-            try {
+            try
+            {
                 _ = new System.Net.Mail.MailAddress(email);
             }
-            catch {
+            catch
+            {
                 return _registrationManager.Error("Email Address is incorrect!");
             }
 

@@ -1,6 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using Neo4j.Driver.V1;
+﻿using Neo4j.Driver.V1;
+using System;
 
 namespace RebusAdmin.Logic
 {

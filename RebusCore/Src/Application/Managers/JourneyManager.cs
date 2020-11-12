@@ -1,8 +1,8 @@
-﻿using System;
+﻿using FlightSystem.Api.Application.Interfaces.AManagers;
+using FlightSystem.Api.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using FlightSystem.Api.Application.Interfaces.AManagers;
-using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Application.Managers
 {
@@ -65,7 +65,7 @@ namespace FlightSystem.Api.Application.Managers
 
         private void AddTrips()
         {
-            foreach(var trip in journey.trips)
+            foreach (var trip in journey.trips)
             {
                 trip.routes = routeMan.ManageRoutes(trip.tripParams);
                 trip.numOfRoutes = trip.routes.Count();

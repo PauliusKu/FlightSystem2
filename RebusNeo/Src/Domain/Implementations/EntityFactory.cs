@@ -1,7 +1,6 @@
-﻿using System;
+﻿using RebusNeo.Src.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
-using RebusNeo.Src.Domain.Implementations;
-using RebusNeo.Src.Domain.Interfaces;
 
 namespace RebusNeo.Src.Domain.Implementations
 {

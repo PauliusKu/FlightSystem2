@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using FlightSystem.Api.Application.Interfaces.AServices;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
 using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Interfaces;
 using FlightSystem.Api.Integration.Config;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 
 namespace FlightSystem.Api.Repository.FileSystem.Data
 {
@@ -21,7 +21,7 @@ namespace FlightSystem.Api.Repository.FileSystem.Data
 
         public void AddFlagsToCountries(IEnumerable<ICountry> countries)
         {
-            foreach(var country in countries)
+            foreach (var country in countries)
             {
                 country.flag = GetFlagImageString(country.code);
             }
@@ -46,4 +46,3 @@ namespace FlightSystem.Api.Repository.FileSystem.Data
         }
     }
 }
-    

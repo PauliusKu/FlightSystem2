@@ -1,14 +1,9 @@
 using RebusNeo.Src.Application.Interfaces.AManagers;
+using RebusNeo.Src.Application.Logic.Journey;
+using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Domain.Interfaces;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System;
 using System.Linq;
-using RebusNeo.Src.Repository.MSSQL.Common;
-using RebusNeo.Src.Domain.Implementations;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using RebusNeo.Src.Application.Logic.Journey;
 
 namespace RebusNeo.Src.Application.Logic.System
 {
@@ -25,7 +20,8 @@ namespace RebusNeo.Src.Application.Logic.System
         {
             reportUsers.reportUsers = new List<ReportUser>();
 
-            foreach(var user in context.userInfo.ToList()) {
+            foreach (var user in context.userInfo.ToList())
+            {
                 TokenManager tokenManager = new TokenManager();
                 tokenManager.SetDbContext(context);
                 journeyManager.SetDbContext(context);
@@ -48,5 +44,5 @@ namespace RebusNeo.Src.Application.Logic.System
             entities.Add(report);
             return responseFactory.CreateResponse(0, "", entities, "");
         }
-    } 
+    }
 }

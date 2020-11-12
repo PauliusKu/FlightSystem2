@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using FlightSystem.Api.Domain.Implementations.Entities;
+﻿using FlightSystem.Api.Domain.Implementations.Entities;
 using FlightSystem.Api.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace FlightSystem.Api.Domain.Implementations.Factories
 {

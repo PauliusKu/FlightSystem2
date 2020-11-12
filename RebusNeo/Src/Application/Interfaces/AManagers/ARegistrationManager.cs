@@ -1,10 +1,7 @@
-using System;
+using Microsoft.AspNetCore.Mvc;
+using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Repository.MSSQL.Common;
 using System.Collections.Generic;
-using RebusNeo.Src.Domain.Implementations;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
 namespace RebusNeo.Src.Application.Interfaces.AManagers
 {

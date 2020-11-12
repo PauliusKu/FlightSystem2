@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RebusNeo.Src.Application.Interfaces.IData;
+﻿using RebusNeo.Src.Application.Interfaces.IData;
 using RebusNeo.Src.Integration.Config;
 
 namespace RebusNeo.Src.Repository.FileSystem.Data

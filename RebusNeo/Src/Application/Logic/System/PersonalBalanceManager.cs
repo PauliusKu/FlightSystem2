@@ -1,7 +1,7 @@
-using System;
-using RebusNeo.Src.Domain.Interfaces;
-using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Application.Interfaces.AManagers;
+using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,7 +12,8 @@ namespace RebusNeo.Src.Application.Logic.System
         private TokenManager _tokenManager = new TokenManager();
         private Balance balance;
 
-        public override string AddPersonalBalance(string pToken, int pUserId, string pAddBal){
+        public override string AddPersonalBalance(string pToken, int pUserId, string pAddBal)
+        {
             _tokenManager.SetDbContext(context);
 
             if (!_tokenManager.IsTokenValid(pToken, pUserId))
@@ -28,19 +29,21 @@ namespace RebusNeo.Src.Application.Logic.System
                 context.Add(balance);
             }
 
-            try{
+            try
+            {
                 balance.balance += Convert.ToDecimal(pAddBal);
                 if (balance.balance < 0)
                     return CreateErrorResp(String.Format(String.Format("{0}", "Negative amount!")));
             }
-            catch{}
+            catch { }
 
             context.SaveChanges();
 
             return CreateOkResp();
         }
 
-        public override string GetPersonalBalance(string pToken, int pUserId){
+        public override string GetPersonalBalance(string pToken, int pUserId)
+        {
             _tokenManager.SetDbContext(context);
 
             if (!_tokenManager.IsTokenValid(pToken, pUserId))
@@ -78,12 +81,13 @@ namespace RebusNeo.Src.Application.Logic.System
 
                 context.Add(balance);
             }
-            try{
+            try
+            {
                 balance.balance += Convert.ToDecimal(pChange);
                 if (balance.balance < 0)
                     return;
             }
-            catch{}
+            catch { }
 
             context.SaveChanges();
         }

@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FlightSystem.Api.Domain.Interfaces;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RebusNeo.Src.Application.Interfaces.IData;
+﻿using RebusNeo.Src.Application.Interfaces.IData;
 
 namespace RebusNeo.Src.Application.Logic.TestConn
 {
@@ -21,7 +17,7 @@ namespace RebusNeo.Src.Application.Logic.TestConn
 
             // try
             // {
-                _results = _testConnData.GetTestConnResults();
+            _results = _testConnData.GetTestConnResults();
             // }
             // catch (Exception ex)
             // {

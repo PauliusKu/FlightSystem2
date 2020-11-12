@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FlightSystem.Api.Domain.Interfaces;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {
@@ -11,9 +11,10 @@ namespace FlightSystem.Api.Domain.Implementations.Entities
         private List<IRoute> _routes;
 
         [JsonProperty]
-        public ITripParams tripParams { 
-            get{ return _tripParams; }
-            set { _tripParams = (TripParams)value; } 
+        public ITripParams tripParams
+        {
+            get { return _tripParams; }
+            set { _tripParams = (TripParams)value; }
         }
 
         [JsonProperty]

@@ -1,5 +1,5 @@
-using System;
 using RebusNeo.Src.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 
 namespace RebusNeo.Src.Domain.Implementations
@@ -14,8 +14,8 @@ namespace RebusNeo.Src.Domain.Implementations
 
         public string status { get; set; }
 
-        public bool session { get; set; }  
+        public bool session { get; set; }
 
-        public List<OrderResp> orders { get; set; }    
+        public List<OrderResp> orders { get; set; }
     }
 }

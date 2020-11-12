@@ -1,8 +1,5 @@
-﻿using System;
+﻿using RebusNeo.Src.Domain.Implementations;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using RebusNeo.Src.Domain.Implementations;
 
 
 namespace RebusNeo.Src.Application.Interfaces.AManagers

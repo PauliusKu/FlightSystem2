@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using RebusNeo.Src.Application.Interfaces.IServices;
+﻿using RebusNeo.Src.Application.Interfaces.IServices;
 using RebusNeo.Src.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace RebusNeo.Src.Application.Interfaces.Factories
 {

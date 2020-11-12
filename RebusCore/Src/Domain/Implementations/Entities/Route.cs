@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
+﻿using FlightSystem.Api.Domain.Interfaces;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {
@@ -19,10 +19,11 @@ namespace FlightSystem.Api.Domain.Implementations.Entities
         public int best { get; set; }
 
         [JsonProperty]
-        public List<IFlight> flights {
+        public List<IFlight> flights
+        {
             get { return _flights; }
             set { _flights = value; }
-        } 
+        }
 
         public Route() { }
 

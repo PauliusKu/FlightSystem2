@@ -1,5 +1,3 @@
-using System;
-
 namespace RebusNeo.Src.Domain.Interfaces
 {
     public interface IFlight : IEntity

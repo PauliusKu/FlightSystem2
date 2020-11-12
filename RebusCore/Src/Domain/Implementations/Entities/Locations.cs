@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using FlightSystem.Api.Domain.Interfaces;
+using Newtonsoft.Json;
 using System.Collections.Generic;
-using FlightSystem.Api.Domain.Interfaces;
 
 namespace FlightSystem.Api.Domain.Implementations.Entities
 {
@@ -19,7 +19,8 @@ namespace FlightSystem.Api.Domain.Implementations.Entities
 
 
         [JsonProperty]
-        public IEnumerable<ICountry> countries {
+        public IEnumerable<ICountry> countries
+        {
             get { return _countries; }
             set { _countries = (List<Country>)value; }
         }

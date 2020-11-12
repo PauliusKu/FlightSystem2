@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
 using RebusNeo.Src.Application.Interfaces.IServices;
 using RebusNeo.Src.Domain.Interfaces;
-using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace RebusNeo.Src.Integration.Common.Services.Response
 {

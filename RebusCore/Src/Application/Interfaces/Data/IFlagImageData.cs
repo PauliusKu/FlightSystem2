@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using FlightSystem.Api.Domain.Interfaces;
+﻿using FlightSystem.Api.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace FlightSystem.Api.Application.Interfaces.Data
 {

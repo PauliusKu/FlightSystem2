@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RebusNeo.Src.Application.Interfaces.AManagers;
 using RebusNeo.Src.Application.Logic.System;
 using RebusNeo.Src.Repository.MSSQL.Common;
-using RebusNeo.Src.Domain.Implementations;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace RebusNeo.Src.Integration.Controllers
@@ -32,10 +28,11 @@ namespace RebusNeo.Src.Integration.Controllers
         [HttpGet]
         public string Get([Required] int userid, [Required] string amount)
         {
-            try{
+            try
+            {
                 personalBalanceManager.UpdatePersonalBalance(userid, Convert.ToDecimal(amount));
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return "Error";
             }

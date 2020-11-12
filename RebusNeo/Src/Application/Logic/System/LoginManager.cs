@@ -1,13 +1,10 @@
 using RebusNeo.Src.Application.Interfaces.AManagers;
-using RebusNeo.Src.Domain.Interfaces;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using System;
-using System.Linq;
-using RebusNeo.Src.Repository.MSSQL.Common;
 using RebusNeo.Src.Domain.Implementations;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+using RebusNeo.Src.Domain.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
 
 namespace RebusNeo.Src.Application.Logic.System
 {
@@ -18,7 +15,7 @@ namespace RebusNeo.Src.Application.Logic.System
 
         private const int minPasswordLength = 8;
 
-        private int _userId; 
+        private int _userId;
 
         public override string Login(string username, string password)
         {
@@ -26,7 +23,7 @@ namespace RebusNeo.Src.Application.Logic.System
             {
                 string userAuthRes = UserAuthentification(username, password);
 
-                if (userAuthRes == "") 
+                if (userAuthRes == "")
                     return CreateOkResp();
                 else return CreateErrorResp(String.Format("{0}", userAuthRes));
             }
@@ -37,7 +34,8 @@ namespace RebusNeo.Src.Application.Logic.System
             }
         }
 
-        public override string LoginChangePass(string username, string password, string newPassword){
+        public override string LoginChangePass(string username, string password, string newPassword)
+        {
             try
             {
                 string userAuthRes = UserAuthentification(username, password);
@@ -80,7 +78,8 @@ namespace RebusNeo.Src.Application.Logic.System
 
         public override string BanUser(string username, string action)
         {
-            try{
+            try
+            {
                 _userInfo = context.userInfo.First(o => o.loginName == username);
 
                 switch (action)
@@ -103,7 +102,7 @@ namespace RebusNeo.Src.Application.Logic.System
                 context.SaveChanges();
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return String.Format("Exception caught: {0}", ex);
             }
@@ -120,10 +119,12 @@ namespace RebusNeo.Src.Application.Logic.System
             _userInfo.status = "ACTIVE";
         }
 
-        private string UserAuthentification(string username, string password){
+        private string UserAuthentification(string username, string password)
+        {
             string savedPasswordHash;
 
-            try{
+            try
+            {
                 _userInfo = context.userInfo.First(o => o.loginName == username);
                 savedPasswordHash = _userInfo.password;
 
@@ -139,11 +140,13 @@ namespace RebusNeo.Src.Application.Logic.System
                 var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
                 byte[] hash = pbkdf2.GetBytes(20);
                 /* Compare the results */
-                for (int i=0; i < 20; i++){
-                    if (hashBytes[i+16] != hash[i]){
+                for (int i = 0; i < 20; i++)
+                {
+                    if (hashBytes[i + 16] != hash[i])
+                    {
                         return "Incorrect Username or Password!";
                     }
-                }  
+                }
             }
 
             catch (Exception)
@@ -210,5 +213,5 @@ namespace RebusNeo.Src.Application.Logic.System
 
             return Convert.ToBase64String(hashBytes);
         }
-    } 
+    }
 }

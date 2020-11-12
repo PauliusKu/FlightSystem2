@@ -1,5 +1,5 @@
-﻿using System;
-using FlightSystem.Api.Application.Interfaces.AServices;
+﻿using FlightSystem.Api.Application.Interfaces.AServices;
+using System;
 
 namespace FlightSystem.Api.Integration.Common.Services.Logger
 {

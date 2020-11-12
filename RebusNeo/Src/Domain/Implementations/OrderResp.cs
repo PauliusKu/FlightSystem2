@@ -1,4 +1,3 @@
-using System;
 using RebusNeo.Src.Domain.Interfaces;
 using System.Collections.Generic;
 

@@ -1,6 +1,6 @@
-﻿using System;
-using FlightSystem.Api.Domain.Implementations.Entities;
+﻿using FlightSystem.Api.Domain.Implementations.Entities;
 using Neo4j.Driver.V1;
+using System;
 
 namespace FlightSystem.Api.Repository.Neo4J.Common
 {

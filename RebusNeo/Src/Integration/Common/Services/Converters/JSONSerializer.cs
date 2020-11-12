@@ -1,5 +1,5 @@
-﻿using RebusNeo.Src.Application.Interfaces.IServices;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using RebusNeo.Src.Application.Interfaces.IServices;
 
 namespace RebusNeo.Src.Integration.Common.Services.Converters
 {

@@ -1,5 +1,3 @@
-using System;
-
 namespace RebusAdmin.Logic
 {
     public class StatusManager
@@ -8,6 +6,6 @@ namespace RebusAdmin.Logic
         {
             return false;
         }
-        
+
     }
 }

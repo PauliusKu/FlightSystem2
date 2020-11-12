@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System.Linq;
-using System;
-using RebusNeo.Src.Domain.Implementations;
 
 namespace RebusNeo.Src.Repository.MSSQL.Common
 {

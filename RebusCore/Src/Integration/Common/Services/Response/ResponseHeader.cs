@@ -15,6 +15,6 @@ namespace FlightSystem.Api.Integration.Common.Services.Response
         }
 
         [JsonProperty]
-        public IResponseError ResponseError { get => _responseError;}
+        public IResponseError ResponseError { get => _responseError; }
     }
 }

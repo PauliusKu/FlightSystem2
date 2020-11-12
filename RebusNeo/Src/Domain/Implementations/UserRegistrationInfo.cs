@@ -9,7 +9,7 @@ namespace RebusNeo.Src.Domain.Implementations
             userInfo = info;
             userLoginInfo = loginInfo;
         }
-        public IUserInfo userInfo{ get; set; }
+        public IUserInfo userInfo { get; set; }
 
         public IUserLoginInfo userLoginInfo { get; set; }
     }

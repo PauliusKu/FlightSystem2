@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using FlightSystem.Api.Application.Interfaces.Data;
+﻿using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Implementations.Entities;
 using FlightSystem.Api.Domain.Interfaces;
 using FlightSystem.Api.Repository.Neo4J.Common;
 using Neo4j.Driver.V1;
+using System.Collections.Generic;
 
 namespace FlightSystem.Api.Repository.Neo4J.Data
 {
@@ -25,7 +25,7 @@ namespace FlightSystem.Api.Repository.Neo4J.Data
                                           "RETURN depAirport, depDay, tranAirport, arrAirport, arrDay, flight1, flight2, tranDay1, id(flight1) as id1, id(flight2) as id2, r1, r2, r3, r4, d1, d2, d3, conTime, totPrice " +
                                           "ORDER BY totPrice;");
 
-            foreach(var record in v)
+            foreach (var record in v)
             {
                 routes.Add(FillRouteData(record));
             }
@@ -90,7 +90,7 @@ namespace FlightSystem.Api.Repository.Neo4J.Data
             Flight flightNum1 = flightParser.GetFlight(id1, flight1, depDate1, depTime1, arrDate1, arrTime1, depAirport, tranAirport);
             Flight flightNum2 = flightParser.GetFlight(id2, flight2, depDate2, depTime2, arrDate2, arrTime2, tranAirport, arrAirport);
 
-            List<IFlight> flights = new List<IFlight>() { flightNum1 , flightNum2 };
+            List<IFlight> flights = new List<IFlight>() { flightNum1, flightNum2 };
 
             return new Route(flights);
         }

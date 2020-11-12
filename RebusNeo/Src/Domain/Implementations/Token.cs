@@ -1,11 +1,11 @@
-using System;
 using RebusNeo.Src.Domain.Interfaces;
+using System;
 
 namespace RebusNeo.Src.Domain.Implementations
 {
     public class Token : IEntity, IToken
     {
-        public Token(){}
+        public Token() { }
 
         public Token(string pToken, int pUserid, DateTime pExpireDate)
         {

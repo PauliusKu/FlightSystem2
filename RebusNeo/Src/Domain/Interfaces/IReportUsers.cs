@@ -1,5 +1,5 @@
-using System.Collections.Generic;
 using RebusNeo.Src.Domain.Implementations;
+using System.Collections.Generic;
 
 namespace RebusNeo.Src.Domain.Interfaces
 {

@@ -4,7 +4,7 @@ namespace RebusNeo.Src.Domain.Implementations
 {
     public class PersonalInfo : IEntity, IPersonalInfo
     {
-        public PersonalInfo(){}
+        public PersonalInfo() { }
 
         public int id { get; set; }
         public int userid { get; set; }

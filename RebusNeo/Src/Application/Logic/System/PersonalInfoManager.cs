@@ -1,7 +1,7 @@
-using System;
-using RebusNeo.Src.Domain.Interfaces;
-using RebusNeo.Src.Domain.Implementations;
 using RebusNeo.Src.Application.Interfaces.AManagers;
+using RebusNeo.Src.Domain.Implementations;
+using RebusNeo.Src.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 

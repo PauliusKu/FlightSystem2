@@ -1,11 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace RebusAdmin
 {
-    public static class AsyncHelper  
+    public static class AsyncHelper
     {
         private static readonly TaskFactory _taskFactory = new
             TaskFactory(CancellationToken.None,

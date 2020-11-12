@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using FlightSystem.Api.Application.Interfaces.AManagers;
+﻿using FlightSystem.Api.Application.Interfaces.AManagers;
 using FlightSystem.Api.Application.Interfaces.Data;
 using FlightSystem.Api.Domain.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FlightSystem.Api.Application.Managers
 {
@@ -21,7 +21,7 @@ namespace FlightSystem.Api.Application.Managers
         public RouteManager()
         {
             this.routeData = dataFactory.CreateRouteData();
-            this.backupData =  dataFactory.CreateBackupData();
+            this.backupData = dataFactory.CreateBackupData();
         }
 
         public override List<IRoute> ManageRoutes(ITripParams tripPar)
@@ -52,7 +52,7 @@ namespace FlightSystem.Api.Application.Managers
             List<IFlight> flights = flightMan.GetFlightsByTripParams(tripParams);
             List<IRoute> routes = entityFactory.CreateRoutes();
 
-            foreach(var flight in flights)
+            foreach (var flight in flights)
             {
                 routes.Add(entityFactory.CreateRoute(flight));
                 numOfRoutes++;
@@ -96,7 +96,7 @@ namespace FlightSystem.Api.Application.Managers
 
         private List<IRoute> SortAndCutRoutes(List<IRoute> routes)
         {
-            routes = routes.OrderBy(o=>o.best).ToList();
+            routes = routes.OrderBy(o => o.best).ToList();
             try
             {
                 routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);
