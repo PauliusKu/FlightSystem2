@@ -22,7 +22,7 @@ namespace RebusNeo.Src.Integration.Config
         {
             services.AddControllers();
 
-            var server = Configuration["DBServer"] ?? "52.5.114.87";
+            var server = Configuration["DBServer"] ?? "ms-sql-server";
             var port = Configuration["DBPort"] ?? "1433";
             var database = Configuration["Database"] ?? "FlightSys";
             var user = Configuration["DBUser"] ?? "SA";

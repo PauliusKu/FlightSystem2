@@ -1,10 +1,13 @@
 using System.Runtime.InteropServices;
 
-public static class OperatingSys
+namespace RebusAdmin.Logic
 {
-    public static bool IsWindows() =>
-        RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+    public static class OperatingSys
+    {
+        public static bool IsWindows() =>
+            RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
-    public static bool IsLinux() =>
-        RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
+        public static bool IsLinux() =>
+            RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
+    }
 }

@@ -74,7 +74,7 @@ namespace FlightSystem.Api.Application.Managers
 
         private bool IsValidJourney()
         {
-            DateTime earlierDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            DateTime earlierDateTime = DateTime.MinValue;
 
             foreach (var trip in journey.trips)
             {

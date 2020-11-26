@@ -39,7 +39,7 @@ namespace RebusNeo.Src.Integration.Controllers
                 var a = _context.userInfo.First(o => o.loginName == username).loginName;
                 return _registrationManager.Error("This Username is already used!");
             }
-            catch (Exception)
+            catch (Exception)  // some comment
             {
             }
 
