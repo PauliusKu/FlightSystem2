@@ -8,11 +8,9 @@ namespace RebusAdmin.Controllers
     [Route("[controller]")]
     public class BanUserController : ControllerBase
     {
-        private readonly ILogger<StatusCheckController> _logger;
 
         public BanUserController(ILogger<StatusCheckController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

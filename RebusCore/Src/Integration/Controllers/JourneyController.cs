@@ -11,11 +11,8 @@ namespace RebusCore.Src.Integration.Controllers
     {
         private AJourneyManager _journeyManager = new JourneyManager();
 
-        private readonly ILogger<JourneyController> _logger;
-
         public JourneyController(ILogger<JourneyController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

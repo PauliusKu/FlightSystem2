@@ -9,13 +9,10 @@ namespace RebusNeo.Src.Integration.Controllers
     [Route("[controller]")]
     public class JourneyController : ControllerBase
     {
-
-        private readonly ILogger<JourneyController> _logger;
         private readonly AJourneyManager _journeyManager = new JourneyManager();
 
         public JourneyController(ILogger<JourneyController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

@@ -11,11 +11,8 @@ namespace RebusCore.Src.Integration.Controllers
     {
         private AFlightManager _flightManager = new FlightManager();
 
-        private readonly ILogger<FlightController> _logger;
-
         public FlightController(ILogger<FlightController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

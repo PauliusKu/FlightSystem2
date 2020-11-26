@@ -12,11 +12,8 @@ namespace RebusCore.Src.Integration.Controllers
     {
         private AFlightManager _flightManager = new FlightManager();
 
-        private readonly ILogger<TestConnController> _logger;
-
         public TestConnController(ILogger<TestConnController> logger)
         {
-            _logger = logger;
         }
 
         /* FIXME remove dirrect realations. Maybe use application logic instead */

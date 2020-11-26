@@ -8,11 +8,8 @@ namespace RebusAdmin.Controllers
     [Route("[controller]")]
     public class BalanceController : ControllerBase
     {
-        private readonly ILogger<StatusCheckController> _logger;
-
         public BalanceController(ILogger<StatusCheckController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

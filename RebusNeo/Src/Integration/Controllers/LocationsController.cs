@@ -9,13 +9,10 @@ namespace RebusNeo.Src.Integration.Controllers
     [Route("[controller]")]
     public class LocationsController : ControllerBase
     {
-
-        private readonly ILogger<LocationsController> _logger;
         private readonly ALocationtManager _locationManager = new LocationManager();
 
         public LocationsController(ILogger<LocationsController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

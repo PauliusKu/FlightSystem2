@@ -16,14 +16,12 @@ namespace RebusNeo.Src.Integration.Controllers
     public class RegisterController : ControllerBase
     {
 
-        private readonly ILogger<RegisterController> _logger;
         private readonly ARegistrationManager _registrationManager = new RegistrationManager();
 
         private readonly MSSQLContext _context;
 
         public RegisterController(ILogger<RegisterController> logger, MSSQLContext context)
         {
-            _logger = logger;
             _context = context;
         }
 

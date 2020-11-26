@@ -9,13 +9,10 @@ namespace RebusNeo.Src.Integration.Controllers
     [Route("[controller]")]
     public class TestConnController : ControllerBase
     {
-
-        private readonly ILogger<TestConnController> _logger;
         private ATestConnManager _testConnManager = new TestConnManager();
 
         public TestConnController(ILogger<TestConnController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

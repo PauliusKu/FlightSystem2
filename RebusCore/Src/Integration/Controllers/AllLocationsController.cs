@@ -9,12 +9,8 @@ namespace RebusCore.Src.Integration.Controllers
     [Route("[controller]")]
     public class AllLocationsController : ControllerBase
     {
-
-        private readonly ILogger<AllLocationsController> _logger;
-
         public AllLocationsController(ILogger<AllLocationsController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

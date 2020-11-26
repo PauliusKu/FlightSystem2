@@ -9,13 +9,10 @@ namespace RebusNeo.Src.Integration.Controllers
     [Route("[controller]")]
     public class FlightController : ControllerBase
     {
-
-        private readonly ILogger<FlightController> _logger;
         private readonly AFlightManager _flightManager = new FlightManager();
 
         public FlightController(ILogger<FlightController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

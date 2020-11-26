@@ -8,12 +8,10 @@ namespace RebusAdmin.Controllers
     [Route("[controller]")]
     public class DataUpdate : ControllerBase
     {
-        private readonly ILogger<DataUpdate> _logger;
         private readonly DataUpdateManager _dataUpdateManager = new DataUpdateManager();
 
         public DataUpdate(ILogger<DataUpdate> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]

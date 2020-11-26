@@ -8,11 +8,8 @@ namespace RebusAdmin.Controllers
     [Route("[controller]")]
     public class ReportController : ControllerBase
     {
-        private readonly ILogger<StatusCheckController> _logger;
-
         public ReportController(ILogger<StatusCheckController> logger)
         {
-            _logger = logger;
         }
 
         [HttpGet]
