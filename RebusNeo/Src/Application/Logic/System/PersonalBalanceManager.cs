@@ -35,7 +35,9 @@ namespace RebusNeo.Src.Application.Logic.System
                 if (balance.balance < 0)
                     return CreateErrorResp(String.Format(String.Format("{0}", "Negative amount!")));
             }
-            catch { }
+            catch { 
+                // some comment
+            }
 
             context.SaveChanges();
 
@@ -87,7 +89,9 @@ namespace RebusNeo.Src.Application.Logic.System
                 if (balance.balance < 0)
                     return;
             }
-            catch { }
+            catch {
+                // some comment
+             } 
 
             context.SaveChanges();
         }

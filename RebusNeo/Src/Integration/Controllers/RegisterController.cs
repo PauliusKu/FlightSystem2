@@ -39,8 +39,9 @@ namespace RebusNeo.Src.Integration.Controllers
                 var a = _context.userInfo.First(o => o.loginName == username).loginName;
                 return _registrationManager.Error("This Username is already used!");
             }
-            catch (Exception)  // some comment
+            catch (Exception) 
             {
+                // some comment
             }
 
             if (username.Length < 8 || password.Length < 8)

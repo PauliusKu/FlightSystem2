@@ -101,9 +101,9 @@ namespace FlightSystem.Api.Application.Managers
             {
                 routes.RemoveRange(maxRoutesReturn, routes.Count() - maxRoutesReturn);
             }
-            catch (Exception) // some comment
+            catch (Exception)
             {
-
+                // some comment
             }
 
             if (routes.Count() > 0)

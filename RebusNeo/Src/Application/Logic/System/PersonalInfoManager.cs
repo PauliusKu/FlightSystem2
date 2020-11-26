@@ -14,7 +14,7 @@ namespace RebusNeo.Src.Application.Logic.System
 
         public override string SetPersonalInfo(string pToken, int pUserId, string pFirstName, string pLastName, string pPhonenumber, string pCountry, string pCity, string pStreet, string pHouse)
         {
-            pToken.Trim();
+            pToken = pToken.Trim();
 
             _tokenManager.SetDbContext(context);
 

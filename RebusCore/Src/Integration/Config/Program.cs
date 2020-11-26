@@ -22,9 +22,9 @@ namespace FlightSystem.Api.Integration.Config
             {
                 _ = Neo4JContext.Driver;
             }
-            catch (Exception)  // some comment
+            catch (Exception)
             {
-
+                // some comment
             }
 
             host.Run();
