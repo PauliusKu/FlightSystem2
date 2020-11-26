@@ -24,7 +24,7 @@ namespace FlightSystem.Api.Integration.Config
             }
             catch (Exception)
             {
-
+                // some comment
             }
 
             host.Run();

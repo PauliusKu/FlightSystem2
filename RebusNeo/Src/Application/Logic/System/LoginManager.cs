@@ -12,6 +12,7 @@ namespace RebusNeo.Src.Application.Logic.System
     {
         private UserInfo _userInfo;
         private TokenManager _tokenManager = new TokenManager();
+        private PasswordManager _passwordManager = new PasswordManager();
 
         private const int minPasswordLength = 8;
 
@@ -119,44 +120,6 @@ namespace RebusNeo.Src.Application.Logic.System
             _userInfo.status = "ACTIVE";
         }
 
-        private string UserAuthentification(string username, string password)
-        {
-            string savedPasswordHash;
-
-            try
-            {
-                _userInfo = context.userInfo.First(o => o.loginName == username);
-                savedPasswordHash = _userInfo.password;
-
-                if (_userInfo.status != "ACTIVE")
-                    return "Access denied!";
-
-                /* Extract the bytes */
-                byte[] hashBytes = Convert.FromBase64String(savedPasswordHash);
-                /* Get the salt */
-                byte[] salt = new byte[16];
-                Array.Copy(hashBytes, 0, salt, 0, 16);
-                /* Compute the hash on the password the user entered */
-                var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
-                byte[] hash = pbkdf2.GetBytes(20);
-                /* Compare the results */
-                for (int i = 0; i < 20; i++)
-                {
-                    if (hashBytes[i + 16] != hash[i])
-                    {
-                        return "Incorrect Username or Password!";
-                    }
-                }
-            }
-
-            catch (Exception)
-            {
-                return "Incorrect Username or Password.";
-            }
-
-            return "";
-        }
-
         private string CreateOkResp()
         {
             _tokenManager.SetDbContext(context);
@@ -178,7 +141,7 @@ namespace RebusNeo.Src.Application.Logic.System
 
         private string ChangePassword(string password)
         {
-            string hashedPass = HashPass(password);
+            string hashedPass = _passwordManager.HashPass(password);
 
             if (hashedPass == _userInfo.password)
                 return CreateErrorResp(String.Format("{0}", "New password is same as old!"));
@@ -199,19 +162,25 @@ namespace RebusNeo.Src.Application.Logic.System
             return true;
         }
 
-        private string HashPass(string password)
+        private string UserAuthentification(string username, string password)
         {
-            byte[] salt;
-            new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+            string savedPasswordHash;
 
-            var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000);
-            byte[] hash = pbkdf2.GetBytes(20);
+            try
+            {
+                _userInfo = context.userInfo.First(o => o.loginName == username);
+                savedPasswordHash = _userInfo.password;
 
-            byte[] hashBytes = new byte[36];
-            Array.Copy(salt, 0, hashBytes, 0, 16);
-            Array.Copy(hash, 0, hashBytes, 16, 20);
+                if (_userInfo.status != "ACTIVE")
+                    return "Access denied!";
 
-            return Convert.ToBase64String(hashBytes);
+                return _passwordManager.validatePassword(savedPasswordHash, password);
+            }
+            catch (Exception)
+            {
+                return "Incorrect Username or Password.";
+            }
         }
+
     }
 }
